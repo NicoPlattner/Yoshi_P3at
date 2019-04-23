@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Main_Controller.cpp" />
+    <ClCompile Include="..\includes\cpp\src\Accelerometer.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Brake.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Camera.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Compass.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Connector.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Device.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\DifferentialWheels.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Display.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\DistanceSensor.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Emitter.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Field.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\GPS.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Gyro.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\InertialUnit.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Joystick.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Keyboard.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\LED.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Lidar.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\LightSensor.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Motion.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Motor.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Mouse.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Node.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Pen.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\PositionSensor.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Radar.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\RangeFinder.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Receiver.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Robot.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Skin.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Speaker.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Supervisor.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\TouchSensor.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="IncludeFilter">
+      <UniqueIdentifier>{1e3504da-6f2f-4836-a5e0-ba5110fd09e0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

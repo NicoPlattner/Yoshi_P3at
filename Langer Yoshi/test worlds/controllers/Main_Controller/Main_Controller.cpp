@@ -1,53 +1,59 @@
-// File:          Main_Controller.cpp
-// Date:
-// Description:
-// Author:
-// Modifications:
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <webots/lidar.h>
+#include <webots/motor.h>
+#include <webots/robot.h>
 
-// You may need to add webots include files such as
-// <webots/DistanceSensor.hpp>, <webots/LED.hpp>, etc.
-// and/or to add some other includes
-#include <webots/Robot.hpp>
+#define TIME_STEP 32
+#define MAX_SPEED 6.4
+#define CRUISING_SPEED 5.0
+#define BACK_SLOWDOWN 0.9
 
-// All the webots classes are defined in the "webots" namespace
-using namespace webots;
-
-// This is the main program of your controller.
-// It creates an instance of your Robot instance, launches its
-// function(s) and destroys it at the end of the execution.
-// Note that only one instance of Robot should be created in
-// a controller program.
-// The arguments of the main function can be specified by the
-// "controllerArgs" field of the Robot node
 int main(int argc, char **argv)
 {
-  // create the Robot instance.
-  Robot *robot = new Robot();
+	wb_robot_init();
 
-  // get the time step of the current world.
-  int timeStep = (int) robot->getBasicTimeStep();
+	// get devices
+	WbDeviceTag front_left_wheel = wb_robot_get_device("front left wheel");
+	WbDeviceTag front_right_wheel = wb_robot_get_device("front right wheel");
+	WbDeviceTag back_left_wheel = wb_robot_get_device("back left wheel");
+	WbDeviceTag back_right_wheel = wb_robot_get_device("back right wheel");
 
-  // You should insert a getDevice-like function in order to get the
-  // instance of a device of the robot. Something like:
-  //  LED *led = robot->getLED("ledname");
-  //  DistanceSensor *ds = robot->getDistanceSensor("dsname");
-  //  ds->enable(timeStep);
+	// init motors
+	wb_motor_set_position(front_left_wheel, INFINITY);
+	wb_motor_set_position(front_right_wheel, INFINITY);
+	wb_motor_set_position(back_left_wheel, INFINITY);
+	wb_motor_set_position(back_right_wheel, INFINITY);
 
-  // Main loop:
-  // - perform simulation steps until Webots is stopping the controller
-  while (robot->step(timeStep) != -1) {
-    // Read the sensors:
-    // Enter here functions to read sensor data, like:
-    //  double val = ds->getValue();
+	// init speed for each wheel
+	double back_left_speed = 1.0, back_right_speed = 1.0;
+	double front_left_speed = 1.0, front_right_speed = 1.0;
+	wb_motor_set_velocity(front_left_wheel, front_left_speed);
+	wb_motor_set_velocity(front_right_wheel, front_right_speed);
+	wb_motor_set_velocity(back_left_wheel, back_left_speed);
+	wb_motor_set_velocity(back_right_wheel, back_right_speed);
 
-    // Process sensor data here.
+	// init dynamic variables
+	double speed_factor = 1.0;
+	
+	// control loop
+	while (wb_robot_step(TIME_STEP) != -1) {
 
-    // Enter here functions to send actuator commands, like:
-    //  led->set(1);
-  };
+			back_left_speed = CRUISING_SPEED;
+			back_right_speed = CRUISING_SPEED;
+			front_left_speed = CRUISING_SPEED;
+			front_right_speed = CRUISING_SPEED;
 
-  // Enter here exit cleanup code.
 
-  delete robot;
-  return 0;
+		// set actuators
+		wb_motor_set_velocity(front_left_wheel, front_left_speed);
+		wb_motor_set_velocity(front_right_wheel, front_right_speed);
+		wb_motor_set_velocity(back_left_wheel, back_left_speed);
+		wb_motor_set_velocity(back_right_wheel, back_right_speed);
+	}
+	
+	wb_robot_cleanup();
+
+	return 0;
 }

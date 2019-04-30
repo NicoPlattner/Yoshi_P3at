@@ -101,12 +101,6 @@
     <ClCompile Include="..\includes\cpp\src\TouchSensor.cpp">
       <Filter>IncludeFilter</Filter>
     </ClCompile>
-    <ClCompile Include="src\MotorController.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="AbstractRoadmapController.h">
-      <Filter>src</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="IncludeFilter">
@@ -115,5 +109,22 @@
     <Filter Include="src">
       <UniqueIdentifier>{9b5b846d-cb6f-4b33-bb92-f366c5749e01}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Abstract_CommandHandler.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Abstract_MotorController.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AbstractRoadmapController.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Command.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Abstract_Motors.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

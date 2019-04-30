@@ -101,10 +101,16 @@
     <ClCompile Include="..\includes\cpp\src\TouchSensor.cpp">
       <Filter>IncludeFilter</Filter>
     </ClCompile>
+    <ClCompile Include="src\MotorController.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="IncludeFilter">
       <UniqueIdentifier>{1e3504da-6f2f-4836-a5e0-ba5110fd09e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{9b5b846d-cb6f-4b33-bb92-f366c5749e01}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

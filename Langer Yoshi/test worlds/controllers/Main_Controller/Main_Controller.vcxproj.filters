@@ -101,6 +101,12 @@
     <ClCompile Include="..\includes\cpp\src\TouchSensor.cpp">
       <Filter>IncludeFilter</Filter>
     </ClCompile>
+    <ClCompile Include="src\MotorController.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Abstract_NavigationStrategist.h">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="IncludeFilter">
@@ -124,6 +130,9 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\Abstract_Motors.h">
+		<Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Abstract_RoadmapController.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

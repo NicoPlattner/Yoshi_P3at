@@ -104,7 +104,7 @@
     <ClCompile Include="src\MotorController.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="AbstractRoadmapController.h">
+    <ClCompile Include="Abstract_NavigationStrategist.h">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -115,5 +115,19 @@
     <Filter Include="src">
       <UniqueIdentifier>{9b5b846d-cb6f-4b33-bb92-f366c5749e01}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Abstract_CommandHandler.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Abstract_MotorController.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Abstract_RoadmapController.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

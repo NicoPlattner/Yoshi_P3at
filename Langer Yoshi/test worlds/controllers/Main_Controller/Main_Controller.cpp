@@ -13,7 +13,6 @@
 int main(int argc, char **argv)
 {
 	wb_robot_init();
-
 	// get devices
 	WbDeviceTag front_left_wheel = wb_robot_get_device("front left wheel");
 	WbDeviceTag front_right_wheel = wb_robot_get_device("front right wheel");

@@ -6,7 +6,7 @@
 
 class Abstract_MotorController {
 public:
-	Abstract_MotorController(Motors motors);
+	Abstract_MotorController();
 	virtual void doCommand(Command cmd);
 	virtual void stop(void);
 	virtual Command getIntermediate(void);

@@ -4,11 +4,10 @@
 #include <webots/lidar.h>
 #include <webots/motor.h>
 #include <webots/robot.h>
+#include "src/P3AT_Motors.h"
 
 #define TIME_STEP 32
-#define MAX_SPEED 6.4
-#define CRUISING_SPEED 5.0
-#define BACK_SLOWDOWN 0.9
+#define M_PI 3.14159265358979323846  /* pi */
 
 int main(int argc, char **argv)
 {
@@ -19,37 +18,22 @@ int main(int argc, char **argv)
 	WbDeviceTag back_left_wheel = wb_robot_get_device("back left wheel");
 	WbDeviceTag back_right_wheel = wb_robot_get_device("back right wheel");
 
-	// init motors
-	wb_motor_set_position(front_left_wheel, INFINITY);
-	wb_motor_set_position(front_right_wheel, INFINITY);
-	wb_motor_set_position(back_left_wheel, INFINITY);
-	wb_motor_set_position(back_right_wheel, INFINITY);
+	std::vector<WbDeviceTag> motVec;
+	motVec.push_back(front_left_wheel);
+	motVec.push_back(back_left_wheel);
+	motVec.push_back(front_right_wheel);
+	motVec.push_back(back_right_wheel);
 
-	// init speed for each wheel
-	double back_left_speed = 1.0, back_right_speed = 1.0;
-	double front_left_speed = 1.0, front_right_speed = 1.0;
-	wb_motor_set_velocity(front_left_wheel, front_left_speed);
-	wb_motor_set_velocity(front_right_wheel, front_right_speed);
-	wb_motor_set_velocity(back_left_wheel, back_left_speed);
-	wb_motor_set_velocity(back_right_wheel, back_right_speed);
+	float radius_wheel = 0.10;	//Reifenradius ~10cm???
+	float rotation_speed = 2*M_PI; //Eine halbe Reifenumdrehung pro Sekunde
+	float umfang_wendekreis = 2.20;	//Diagonale Rad zu Rad ~ 70cm -> Kreisumfang mit der Diagonale als Annäherung in Meter
 
-	// init dynamic variables
-	double speed_factor = 1.0;
-	
+	P3AT_Motors *Motors = new P3AT_Motors(motVec, radius_wheel, rotation_speed, umfang_wendekreis);
+
 	// control loop
 	while (wb_robot_step(TIME_STEP) != -1) {
-
-			back_left_speed = CRUISING_SPEED;
-			back_right_speed = CRUISING_SPEED;
-			front_left_speed = CRUISING_SPEED;
-			front_right_speed = CRUISING_SPEED;
-
-
-		// set actuators
-		wb_motor_set_velocity(front_left_wheel, front_left_speed);
-		wb_motor_set_velocity(front_right_wheel, front_right_speed);
-		wb_motor_set_velocity(back_left_wheel, back_left_speed);
-		wb_motor_set_velocity(back_right_wheel, back_right_speed);
+			//Motors->rotate(90);	//90 Grad -> Uhrzeigersinn
+			Motors->drive(50); //0.5 Meter
 	}
 	
 	wb_robot_cleanup();

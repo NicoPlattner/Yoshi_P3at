@@ -100,14 +100,17 @@
     <ClCompile Include="..\includes\cpp\src\TouchSensor.cpp">
       <Filter>IncludeFilter</Filter>
     </ClCompile>
+    <ClCompile Include="Main_Controller.cpp" />
     <ClCompile Include="src\P3AT_MotorController.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\P3AT_Motors.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Main_Controller.cpp" />
     <ClCompile Include="src\P3AT_RoadmapController.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\P3AT_CommandHandler.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -144,11 +147,14 @@
     <ClInclude Include="src\P3AT_Motors.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="Main_Controller.h" />
     <ClInclude Include="src\P3AT_RoadmapController.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\WayPoint.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Main_Controller.h" />
+    <ClInclude Include="src\P3AT_CommandHandler.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

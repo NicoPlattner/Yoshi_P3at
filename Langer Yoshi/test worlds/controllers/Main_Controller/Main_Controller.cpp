@@ -7,6 +7,7 @@
 #include "src/P3AT_MotorController.h"
 #include "src/Command.h"
 #include "src/P3AT_RoadmapController.h"
+#include "src/P3AT_CommandHandler.h"
 
 #define TIME_STEP 32
 
@@ -16,6 +17,8 @@ int main(int argc, char **argv)
 	P3AT_MOTOR_CONTROLLER *mc = new P3AT_MOTOR_CONTROLLER();
 
 	P3AT_RoadmapController *rc = new P3AT_RoadmapController();
+
+	P3AT_CommandHandler *ch = new P3AT_CommandHandler(mc);
 
 	// control loop
 	while (wb_robot_step(TIME_STEP) != -1) {

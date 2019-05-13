@@ -33,11 +33,12 @@ void P3AT_MOTOR_CONTROLLER::doCommand(Command c) {
 
 
 void P3AT_MOTOR_CONTROLLER::stop() {
-
+	//TODO
 }
 
 
 Command P3AT_MOTOR_CONTROLLER::getIntermediate() {
+	//TODO
 	Command c;
 
 	return c;
@@ -54,5 +55,6 @@ void P3AT_MOTOR_CONTROLLER::drive(double metres) {
 }
 
 float P3AT_MOTOR_CONTROLLER::calculateDistance() {
+	//TODO
 	return 0;
 }

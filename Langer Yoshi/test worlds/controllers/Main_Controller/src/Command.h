@@ -2,8 +2,8 @@
 #define COMMAND_H
 
 struct Command {
-	int rotation;
-	float distance;
+	double rotation;
+	double distance;
 };
 
 

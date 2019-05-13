@@ -26,14 +26,14 @@ int main(int argc, char **argv)
 
 	float radius_wheel = 0.10;	//Reifenradius ~10cm???
 	float rotation_speed = 2*M_PI; //Eine halbe Reifenumdrehung pro Sekunde
-	float umfang_wendekreis = 2.20;	//Diagonale Rad zu Rad ~ 70cm -> Kreisumfang mit der Diagonale als Annäherung in Meter
+	float umfang_wendekreis = 1.8;	//Diagonale Rad zu Rad ~ 70cm -> Kreisumfang mit der Diagonale als Annäherung in Meter
 
 	P3AT_Motors *Motors = new P3AT_Motors(motVec, radius_wheel, rotation_speed, umfang_wendekreis);
 
 	// control loop
 	while (wb_robot_step(TIME_STEP) != -1) {
-			//Motors->rotate(90);	//90 Grad -> Uhrzeigersinn
-			Motors->drive(50); //0.5 Meter
+			Motors->rotate(45);	//90 Grad -> Uhrzeigersinn
+			//Motors->drive(0.5); //0.5 Meter
 	}
 	
 	wb_robot_cleanup();

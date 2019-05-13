@@ -63,7 +63,6 @@ void P3AT_Motors::rotate(int degree) {
 	}
 }
 void P3AT_Motors::drive(float distance) {
-
 	if (!this->_operating) {
 		this->_operating = true;
 		this->_distanceDriven = 0;
@@ -74,14 +73,10 @@ void P3AT_Motors::drive(float distance) {
 			this->setAllWheelsSpeed(- this->ROTATION_SPEED);
 	}
 	else {
-		double intermediateTime = wb_robot_get_time(); - this->_startTimeStamp;
+		double intermediateTime = wb_robot_get_time() - this->_startTimeStamp;
 		this->_startTimeStamp = wb_robot_get_time();
 		this->_distanceDriven += (RpsToMps(wb_motor_get_velocity(this->Motors[0]), this->RADIUS_WHEEL) * intermediateTime);
 		if (abs(distance) <= abs(this->_distanceDriven)) {
-			std::fstream outfile;
-			outfile.open("out.txt", std::ios::out, std::ios::app);
-			outfile << "### wanted Distance: " << distance << ", Driven Dist: "<< this->_distanceDriven << std::endl;
-			outfile.close();
 			this->setAllWheelsSpeed(0);
 		}
 		

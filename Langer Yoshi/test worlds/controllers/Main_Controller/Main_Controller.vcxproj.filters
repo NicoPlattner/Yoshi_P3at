@@ -113,6 +113,9 @@
     <ClCompile Include="src\P3AT_CommandHandler.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\P3AT_NavigationStrategist.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="IncludeFilter">
@@ -155,6 +158,9 @@
     </ClInclude>
     <ClInclude Include="Main_Controller.h" />
     <ClInclude Include="src\P3AT_CommandHandler.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\P3AT_NavigationStrategist.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

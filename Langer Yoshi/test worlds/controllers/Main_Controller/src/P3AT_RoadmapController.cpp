@@ -4,10 +4,16 @@
 
 
 WayPoint P3AT_RoadmapController::getCoord(){
+	if (roadmap.begin() == roadmap.end()) {
+		return makeEmpty();
+	}
 	return *roadmap.begin();
 }
 
 WayPoint P3AT_RoadmapController::getCoord(int index) {
+	if (index >= roadmap.size()) {
+		return makeEmpty();
+	}
 	std::list<WayPoint> ::iterator it = roadmap.begin();
 	std::advance(it, index);
 	return *it;
@@ -37,4 +43,10 @@ void P3AT_RoadmapController::delCoord(int index) {
 	std::list<WayPoint> ::iterator it = roadmap.begin();
 	std::advance(it, index);
 	roadmap.erase(it);
+}
+
+WayPoint P3AT_RoadmapController::makeEmpty() {
+	WayPoint empty;
+	empty.isEmpty = true;
+	return empty;
 }

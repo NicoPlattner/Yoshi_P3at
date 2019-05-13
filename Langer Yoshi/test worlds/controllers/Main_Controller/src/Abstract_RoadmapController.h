@@ -14,6 +14,7 @@ public:
 	virtual void delCoord() = 0; //delete coordinate at head of list
 	virtual void delCoord(int index) = 0; //delete coordinate at index
 protected:
+	virtual WayPoint makeEmpty() = 0;
 	std::list<WayPoint> roadmap;
 };
 

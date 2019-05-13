@@ -13,6 +13,7 @@ public:
 	void delCoord(); //delete coordinate at head of list
 	void delCoord(int index); //delete coordinate at index
 protected:
+	WayPoint makeEmpty();
 	std::list<WayPoint> roadmap;
 };
 

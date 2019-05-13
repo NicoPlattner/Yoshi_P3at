@@ -24,6 +24,8 @@ void P3AT_CommandHandler::commandMotor(double currentRotation, WayPoint origin, 
 
 	Command c = createCommand(rotate, distance);
 	startCommand(c);
+
+	//TODO call mcDone(angle) in NavigationStrategist
 }
 
 void P3AT_CommandHandler::stop(void) {

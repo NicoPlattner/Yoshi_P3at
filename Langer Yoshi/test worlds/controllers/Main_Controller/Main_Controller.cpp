@@ -8,6 +8,7 @@
 #include "src/Command.h"
 #include "src/P3AT_RoadmapController.h"
 #include "src/P3AT_CommandHandler.h"
+#include "src/P3AT_NavigationStrategist.h"
 
 #define TIME_STEP 32
 
@@ -19,6 +20,8 @@ int main(int argc, char **argv)
 	P3AT_RoadmapController *rc = new P3AT_RoadmapController();
 
 	P3AT_CommandHandler *ch = new P3AT_CommandHandler(mc);
+
+	P3AT_NavigationStrategist *navStrat = new P3AT_NavigationStrategist(rc, ch);
 
 	// control loop
 	while (wb_robot_step(TIME_STEP) != -1) {

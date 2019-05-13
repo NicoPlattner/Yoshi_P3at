@@ -7,9 +7,13 @@
 class Abstract_NavigationStrategist
 {
 public:
-	virtual void mcDone(); //called when motor controller is done with last command; updates position from roadmap
-	virtual void mcDone(WayPoint intermediate); //called if last command was interruted; updates position with "coord"
-	virtual void causeMotion(); //gets next destination from roadmap and calls setCommand
+	Abstract_NavigationStrategist() {};
+	virtual void mcDone(double rotation) = 0; //called when motor controller is done with last command; updates position from roadmap; calls causeMotion again
+	virtual void mcDone(double rotation, WayPoint intermediate) = 0; //called if last command was interruted; updates position with "coord"
+	virtual void causeMotion() = 0; //gets next destination from roadmap and calls commandMotor; also called initially to start navigation
+private:
+	double currentRotation = 0;
+	WayPoint currentPosition;
 };
 
 #endif

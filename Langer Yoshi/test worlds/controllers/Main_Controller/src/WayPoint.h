@@ -2,8 +2,9 @@
 #define WAY_POINT_H
 
 struct WayPoint {
-	int x;
-	int y;
+	int x = 0;
+	int y = 0;
+	bool isEmpty = false;
 };
 
 #endif

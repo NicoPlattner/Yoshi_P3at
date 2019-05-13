@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="Main_Controller.cpp" />
     <ClCompile Include="..\includes\cpp\src\Accelerometer.cpp">
       <Filter>IncludeFilter</Filter>
     </ClCompile>
@@ -107,6 +106,10 @@
     <ClCompile Include="src\P3AT_Motors.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="Main_Controller.cpp" />
+    <ClCompile Include="src\P3AT_RoadmapController.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="IncludeFilter">
@@ -117,6 +120,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Abstract_RoadmapController.h">
+      <Filter>src</Filter>
+    </ClInclude>
     <ClInclude Include="src\Abstract_CommandHandler.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -129,9 +135,6 @@
     <ClInclude Include="src\Abstract_NavigationStrategist.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Abstract_RoadmapController.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="src\Command.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -139,6 +142,13 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\P3AT_Motors.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Main_Controller.h" />
+    <ClInclude Include="src\P3AT_RoadmapController.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WayPoint.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

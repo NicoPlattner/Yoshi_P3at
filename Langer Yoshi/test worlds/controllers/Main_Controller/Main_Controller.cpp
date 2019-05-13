@@ -6,14 +6,16 @@
 #include <webots/robot.h>
 #include "src/P3AT_MotorController.h"
 #include "src/Command.h"
+#include "src/P3AT_RoadmapController.h"
 
 #define TIME_STEP 32
 
 int main(int argc, char **argv)
 {
 	wb_robot_init();
-	P3AT_MOTOR_CONTROLLER mc = P3AT_MOTOR_CONTROLLER();
+	P3AT_MOTOR_CONTROLLER *mc = new P3AT_MOTOR_CONTROLLER();
 
+	P3AT_RoadmapController *rc = new P3AT_RoadmapController();
 
 	// control loop
 	while (wb_robot_step(TIME_STEP) != -1) {
@@ -27,7 +29,7 @@ int main(int argc, char **argv)
 		rotate.rotation = 90;
 
 		//mc.doCommand(drive);
-		mc.doCommand(rotate);
+		mc->doCommand(rotate);
 	}
 	
 	wb_robot_cleanup();

@@ -4,36 +4,30 @@
 #include <webots/lidar.h>
 #include <webots/motor.h>
 #include <webots/robot.h>
-#include "src/P3AT_Motors.h"
+#include "src/P3AT_MotorController.h"
+#include "src/Command.h"
 
 #define TIME_STEP 32
-#define M_PI 3.14159265358979323846  /* pi */
 
 int main(int argc, char **argv)
 {
 	wb_robot_init();
-	// get devices
-	WbDeviceTag front_left_wheel = wb_robot_get_device("front left wheel");
-	WbDeviceTag front_right_wheel = wb_robot_get_device("front right wheel");
-	WbDeviceTag back_left_wheel = wb_robot_get_device("back left wheel");
-	WbDeviceTag back_right_wheel = wb_robot_get_device("back right wheel");
+	P3AT_MOTOR_CONTROLLER mc = P3AT_MOTOR_CONTROLLER();
 
-	std::vector<WbDeviceTag> motVec;
-	motVec.push_back(front_left_wheel);
-	motVec.push_back(back_left_wheel);
-	motVec.push_back(front_right_wheel);
-	motVec.push_back(back_right_wheel);
-
-	float radius_wheel = 0.10;	//Reifenradius ~10cm???
-	float rotation_speed = 2*M_PI; //Eine halbe Reifenumdrehung pro Sekunde
-	float umfang_wendekreis = 1.8;	//Diagonale Rad zu Rad ~ 70cm -> Kreisumfang mit der Diagonale als Annäherung in Meter
-
-	P3AT_Motors *Motors = new P3AT_Motors(motVec, radius_wheel, rotation_speed, umfang_wendekreis);
 
 	// control loop
 	while (wb_robot_step(TIME_STEP) != -1) {
-			Motors->rotate(45);	//90 Grad -> Uhrzeigersinn
-			//Motors->drive(0.5); //0.5 Meter
+		Command drive;
+		Command rotate;
+
+		drive.distance = 0.5;
+		drive.rotation = 0;
+
+		rotate.distance = 0;
+		rotate.rotation = 90;
+
+		//mc.doCommand(drive);
+		mc.doCommand(rotate);
 	}
 	
 	wb_robot_cleanup();

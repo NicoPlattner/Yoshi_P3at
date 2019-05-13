@@ -101,10 +101,10 @@
     <ClCompile Include="..\includes\cpp\src\TouchSensor.cpp">
       <Filter>IncludeFilter</Filter>
     </ClCompile>
-    <ClCompile Include="src\P3AT_Motors.cpp">
+    <ClCompile Include="src\P3AT_MotorController.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\P3AT_MotorController.cpp">
+    <ClCompile Include="src\P3AT_Motors.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -123,21 +123,23 @@
     <ClInclude Include="src\Abstract_MotorController.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\AbstractRoadmapController.h">
+    <ClInclude Include="src\Abstract_Motors.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Abstract_NavigationStrategist.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Abstract_RoadmapController.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\Command.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Abstract_Motors.h">
+    <ClInclude Include="src\P3AT_MotorController.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\P3AT_Motors.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\P3AT_MotorController.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="Main_Controller.h" />
   </ItemGroup>
 </Project>

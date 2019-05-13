@@ -15,6 +15,7 @@ private:
 	bool _operating=false;
 
 public:
+	P3AT_Motors();
 	P3AT_Motors(std::vector<WbDeviceTag> Motoren, float radius_wheel, float rotation_speed, float umfang_wendekreis);
 	void rotate(int degree);
 	void drive(float distance);

@@ -6,14 +6,14 @@
 
 class Abstract_MotorController {
 public:
-	Abstract_MotorController();
-	virtual void doCommand(Command cmd);
-	virtual void stop(void);
-	virtual Command getIntermediate(void);
+	Abstract_MotorController() {};
+	virtual void doCommand(Command cmd) = 0;
+	virtual void stop(void) = 0;
+	virtual Command getIntermediate(void) = 0;
 private:
-	virtual void rotate(); //TODO: insert parameters
-	virtual void drive();	//TODO: insert parameters
-	virtual float calculateDistance();	//TODO: insert parameters -> wie weit ist er wirklich gefahren?
+	virtual void rotate(double degrees) = 0;
+	virtual void drive(double metres) = 0;
+	virtual float calculateDistance() = 0;	//TODO: insert parameters -> wie weit ist er wirklich gefahren?
 };
 
 #endif

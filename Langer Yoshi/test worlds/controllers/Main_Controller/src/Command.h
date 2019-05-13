@@ -4,7 +4,7 @@
 struct Command {
 	int rotation;
 	float distance;
-}cmd;
+};
 
 
 #endif

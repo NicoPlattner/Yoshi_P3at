@@ -4,6 +4,7 @@
 struct Command {
 	double rotation;
 	double distance;
+	bool isObsolete;
 };
 
 

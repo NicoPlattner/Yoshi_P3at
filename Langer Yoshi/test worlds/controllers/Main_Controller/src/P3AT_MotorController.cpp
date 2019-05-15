@@ -15,21 +15,26 @@ P3AT_MOTOR_CONTROLLER::P3AT_MOTOR_CONTROLLER() : Abstract_MotorController::Abstr
 	motVec.push_back(front_right_wheel);
 	motVec.push_back(back_right_wheel);
 
-	float radius_wheel = 0.10;	//Reifenradius ~10cm???
-	float rotation_speed = 2 * M_PI; //Eine halbe Reifenumdrehung pro Sekunde
-	float umfang_wendekreis = 1.8;	//Diagonale Rad zu Rad ~ 70cm -> Kreisumfang mit der Diagonale als Annäherung in Meter
+	double radius_wheel = 0.10;	//Reifenradius ~10cm???
+	double rotation_speed = 2 * M_PI; //Eine halbe Reifenumdrehung pro Sekunde
+	double umfang_wendekreis = 1.8;	//Diagonale Rad zu Rad ~ 70cm -> Kreisumfang mit der Diagonale als Annäherung in Meter
 
 	this->Motors = new P3AT_Motors(motVec, radius_wheel, rotation_speed, umfang_wendekreis);
 
 }
 
-
 void P3AT_MOTOR_CONTROLLER::doCommand(Command c) {
 	this->currentCommand = c;
-	/*if (c.rotation != 0) {	//TODO
-		rotate(c.rotation);
+	if (_isTurning) {
+		if (currentCommand.rotation != 0) {
+			rotate(currentCommand.rotation);
+		}
+		else {
+			_isTurning = false;
+			doCommand(currentCommand);
+		}
 	}
-	else*/ if (currentCommand.distance != 0) {
+	else {
 		drive(currentCommand.distance);
 	}
 }
@@ -37,8 +42,8 @@ void P3AT_MOTOR_CONTROLLER::doCommand(Command c) {
 
 void P3AT_MOTOR_CONTROLLER::stop() {
 	this->Motors->stop();
-	this->isStopped = true;
-	//TODO
+	this->_isStopped = true;
+	this->currentCommand.isObsolete = true;
 }
 
 
@@ -59,20 +64,27 @@ void P3AT_MOTOR_CONTROLLER::drive(double metres) {
 	this->Motors->drive(metres);
 }
 
-float P3AT_MOTOR_CONTROLLER::calculateDistance() {
+double P3AT_MOTOR_CONTROLLER::calculateDistance() {
 	//TODO
 	return 0;
 }
 
 void P3AT_MOTOR_CONTROLLER::check() {
-	if (isStopped) {
+	if (_isStopped) {
 		//TODO: implement call of local strategy in navigation strategist
 	}
-	else if (&currentCommand == NULL) {
+	else if (&currentCommand == NULL || currentCommand.isObsolete) {
 		fetchNextCommand();
 	}
-	else if (this->Motors->isDone(currentCommand.distance)) {
-		fetchNextCommand();
+	else if (this->Motors->isDone(_isTurning, currentCommand.distance)) {
+		if (_isTurning) {
+			_isTurning = false;
+			doCommand(currentCommand);
+		}
+		else {
+			_isTurning = true;
+			fetchNextCommand();
+		}
 	}
 }
 

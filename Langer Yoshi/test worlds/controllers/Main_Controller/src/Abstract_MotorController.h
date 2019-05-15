@@ -14,7 +14,7 @@ public:
 private:
 	virtual void rotate(double degrees) = 0;
 	virtual void drive(double metres) = 0;
-	virtual float calculateDistance() = 0;	//TODO: insert parameters -> wie weit ist er wirklich gefahren?
+	virtual double calculateDistance() = 0;	//TODO: insert parameters -> wie weit ist er wirklich gefahren?
 };
 
 #endif

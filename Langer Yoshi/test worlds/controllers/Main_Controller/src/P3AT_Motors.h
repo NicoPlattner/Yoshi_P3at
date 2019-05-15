@@ -17,14 +17,14 @@ private:
 
 public:
 	P3AT_Motors();
-	P3AT_Motors(std::vector<WbDeviceTag> Motoren, float radius_wheel, float rotation_speed, float umfang_wendekreis);
+	P3AT_Motors(std::vector<WbDeviceTag> Motoren, double radius_wheel, double rotation_speed, double umfang_wendekreis);
 	void rotate(double degree);
 	void drive(double distance);
 	void stop(void);
 	bool isOperating(void);
-	bool isDone(double distance);
+	bool isDone(bool isTurning, double distance);
 };
 
-double RpsToMps(double rps, float radius);
+double RpsToMps(double rps, double radius);
 
 #endif

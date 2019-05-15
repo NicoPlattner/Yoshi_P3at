@@ -19,10 +19,11 @@ public:
 	void addCommandHandler(P3AT_CommandHandler *ch);
 private:
 	P3AT_Motors *Motors;
-	bool isStopped = false;
+	bool _isStopped = false;
+	bool _isTurning = true;
 	void rotate(double degrees);
 	void drive(double metres);
-	float calculateDistance();
+	double calculateDistance();
 	void fetchNextCommand();
 	Command currentCommand;
 	P3AT_CommandHandler *commandHandler;

@@ -1,4 +1,5 @@
 #include "P3AT_MotorController.h"
+#include "P3AT_CommandHandler.h"
 #include "Command.h"
 
 P3AT_MOTOR_CONTROLLER::P3AT_MOTOR_CONTROLLER() : Abstract_MotorController::Abstract_MotorController() {
@@ -28,8 +29,8 @@ void P3AT_MOTOR_CONTROLLER::doCommand(Command c) {
 	/*if (c.rotation != 0) {	//TODO
 		rotate(c.rotation);
 	}
-	else*/ if (c.distance != 0) {
-		drive(c.distance);
+	else*/ if (currentCommand.distance != 0) {
+		drive(currentCommand.distance);
 	}
 }
 
@@ -68,13 +69,17 @@ void P3AT_MOTOR_CONTROLLER::check() {
 		//TODO: implement call of local strategy in navigation strategist
 	}
 	else if (&currentCommand == NULL) {
-		getNextCommand();
+		fetchNextCommand();
 	}
 	else if (this->Motors->isDone(currentCommand.distance)) {
-		getNextCommand();
+		fetchNextCommand();
 	}
 }
 
-void P3AT_MOTOR_CONTROLLER::getNextCommand() {
-	//TODO
+void P3AT_MOTOR_CONTROLLER::fetchNextCommand() {
+	commandHandler->mcDone(currentCommand.rotation);
+}
+
+void P3AT_MOTOR_CONTROLLER::addCommandHandler(P3AT_CommandHandler *ch) {
+	commandHandler = ch;
 }

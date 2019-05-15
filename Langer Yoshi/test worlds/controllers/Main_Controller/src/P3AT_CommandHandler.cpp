@@ -1,10 +1,12 @@
 #include "P3AT_CommandHandler.h"
+#include "P3AT_MotorController.h"
+#include "P3AT_NavigationStrategist.h"
 #include <math.h>
-
 
 
 P3AT_CommandHandler::P3AT_CommandHandler(P3AT_MOTOR_CONTROLLER *MC) : Abstract_CommandHandler() {
 	this->motorController = MC;
+	this->motorController->addCommandHandler(this);
 };
 
 void P3AT_CommandHandler::commandMotor(double currentRotation, WayPoint origin, WayPoint destination) {
@@ -39,9 +41,12 @@ WayPoint P3AT_CommandHandler::getIntermediatePos() {
 	return wp;
 }
 
-bool P3AT_CommandHandler::commandDone(void) {
-	//TODO ???????????????
-	return true;
+void P3AT_CommandHandler::mcDone(double rotation) {
+	navigationStrategist->mcDone(rotation);
+}
+
+void P3AT_CommandHandler::addNavigationStrategist(P3AT_NavigationStrategist *ns){
+	navigationStrategist = ns;
 }
 
 void P3AT_CommandHandler::startCommand(Command c) {

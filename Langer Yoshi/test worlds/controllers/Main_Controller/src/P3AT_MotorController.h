@@ -14,11 +14,15 @@ public:
 	void doCommand(Command cmd);
 	void stop(void);
 	Command getIntermediate(void);
+	void check();
 private:
 	P3AT_Motors *Motors;
+	bool isStopped = false;
 	void rotate(double degrees);
 	void drive(double metres);
 	float calculateDistance();
+	void getNextCommand();
+	Command currentCommand;
 };
 
 #endif

@@ -15,9 +15,10 @@ protected:
 		this->ROTATION_SPEED = rotation_speed;
 		this->UMFANG_WENDEKREIS = umfang_wendekreis;
 	};
-	virtual void rotate(int degree) = 0;
-	virtual void drive(float distance) = 0;
+	virtual void rotate(double degree) = 0;
+	virtual void drive(double distance) = 0;
 	virtual void stop(void) = 0;
+	virtual bool isDone(double distance) = 0;
 };
 
 #endif

@@ -19,20 +19,24 @@ P3AT_MOTOR_CONTROLLER::P3AT_MOTOR_CONTROLLER() : Abstract_MotorController::Abstr
 	float umfang_wendekreis = 1.8;	//Diagonale Rad zu Rad ~ 70cm -> Kreisumfang mit der Diagonale als Annäherung in Meter
 
 	this->Motors = new P3AT_Motors(motVec, radius_wheel, rotation_speed, umfang_wendekreis);
+
 }
 
 
 void P3AT_MOTOR_CONTROLLER::doCommand(Command c) {
-	if (c.rotation != 0) {
+	this->currentCommand = c;
+	/*if (c.rotation != 0) {	//TODO
 		rotate(c.rotation);
 	}
-	else if (c.distance != 0) {
+	else*/ if (c.distance != 0) {
 		drive(c.distance);
 	}
 }
 
 
 void P3AT_MOTOR_CONTROLLER::stop() {
+	this->Motors->stop();
+	this->isStopped = true;
 	//TODO
 }
 
@@ -57,4 +61,20 @@ void P3AT_MOTOR_CONTROLLER::drive(double metres) {
 float P3AT_MOTOR_CONTROLLER::calculateDistance() {
 	//TODO
 	return 0;
+}
+
+void P3AT_MOTOR_CONTROLLER::check() {
+	if (isStopped) {
+		//TODO: implement call of local strategy in navigation strategist
+	}
+	else if (&currentCommand == NULL) {
+		getNextCommand();
+	}
+	else if (this->Motors->isDone(currentCommand.distance)) {
+		getNextCommand();
+	}
+}
+
+void P3AT_MOTOR_CONTROLLER::getNextCommand() {
+	//TODO
 }

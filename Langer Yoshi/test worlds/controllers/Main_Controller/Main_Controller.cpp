@@ -23,9 +23,11 @@ int main(int argc, char **argv)
 
 	P3AT_NavigationStrategist *navStrat = new P3AT_NavigationStrategist(rc, ch);
 
+	rc->addCoord(5, 5);
+
 	// control loop
 	while (wb_robot_step(TIME_STEP) != -1) {
-		Command drive;
+		/*Command drive;
 		Command rotate;
 
 		drive.distance = 0.5;
@@ -35,7 +37,8 @@ int main(int argc, char **argv)
 		rotate.rotation = 90;
 
 		//mc.doCommand(drive);
-		mc->doCommand(rotate);
+		mc->doCommand(rotate);*/
+		mc->check();
 	}
 	
 	wb_robot_cleanup();

@@ -38,7 +38,7 @@ void P3AT_Motors::setAllWheelsSpeed(double speed) {
 	}
 }
 
-void P3AT_Motors::rotate(int degree) {
+void P3AT_Motors::rotate(double degree) {
 	int direction;
 	if (degree > 0) {
 		direction = 1;
@@ -47,7 +47,7 @@ void P3AT_Motors::rotate(int degree) {
 		direction = -1;
 	}
 
-	if (!this->_operating) {
+	if (!this->_operating) {	//TODO: MIGRATE???
 		_operating = true;
 		float strecke = this->UMFANG_WENDEKREIS / 360 * degree;
 		float streckePerSekunde = RpsToMps(this->ROTATION_SPEED, this->RADIUS_WHEEL);
@@ -62,26 +62,33 @@ void P3AT_Motors::rotate(int degree) {
 		}
 	}
 }
-void P3AT_Motors::drive(float distance) {
-	if (!this->_operating) {
-		this->_operating = true;
-		this->_distanceDriven = 0;
-		this->_startTimeStamp = wb_robot_get_time();
-		if (distance > 0)
-			this->setAllWheelsSpeed(this->ROTATION_SPEED);
-		else
-			this->setAllWheelsSpeed(- this->ROTATION_SPEED);
+void P3AT_Motors::drive(double distance) {		
+	this->_operating = true;
+	this->_distanceDriven = 0;
+	this->_startTimeStamp = wb_robot_get_time();
+	if (distance > 0) {
+		this->setAllWheelsSpeed(this->ROTATION_SPEED);
 	}
 	else {
-		double intermediateTime = wb_robot_get_time() - this->_startTimeStamp;
-		this->_startTimeStamp = wb_robot_get_time();
-		this->_distanceDriven += (RpsToMps(wb_motor_get_velocity(this->Motors[0]), this->RADIUS_WHEEL) * intermediateTime);
-		if (abs(distance) <= abs(this->_distanceDriven)) {
-			this->setAllWheelsSpeed(0);
-		}
-		
+		this->setAllWheelsSpeed(-this->ROTATION_SPEED);
 	}
 }
+
+void P3AT_Motors::recalcDistance() {	//TODO: add rotation
+	double intermediateTime = wb_robot_get_time() - this->_startTimeStamp;
+	this->_startTimeStamp = wb_robot_get_time();
+	this->_distanceDriven += (RpsToMps(wb_motor_get_velocity(this->Motors[0]), this->RADIUS_WHEEL) * intermediateTime);
+}
+
+bool P3AT_Motors::isDone(double distance) {		//TODO: add rotation
+	recalcDistance();
+	if (abs(distance) <= abs(this->_distanceDriven)) {
+		this->setAllWheelsSpeed(0);
+		return true;
+	}
+	return false;
+}
+
 void P3AT_Motors::stop(void) {
 	this->setAllWheelsSpeed(0);
 }

@@ -9,7 +9,7 @@
 int main(int argc, char **argv)
 {
 	Log* log = Log::getInstance();
-	log->writeLog("Start Robot", "out.txt", true);
+	log->writeLog("Start Robot", "out.txt", false);
 	wb_robot_init();
 	Abstract_MotorController *mc = new P3AT_MotorController();
 	Abstract_RoadmapController *rc = new P3AT_RoadmapController();

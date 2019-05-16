@@ -2,6 +2,8 @@
 #include "P3AT_MotorController.h"
 #include "P3AT_NavigationStrategist.h"
 #include <math.h>
+#include "Log.h"
+#include <sstream>
 
 
 P3AT_CommandHandler::P3AT_CommandHandler(Abstract_MotorController *MC) : Abstract_CommandHandler::Abstract_CommandHandler(MC) {
@@ -24,10 +26,16 @@ void P3AT_CommandHandler::commandMotor(double currentRotation, WayPoint origin, 
 		rotate += 360;
 	}
 
+	//LOG
+	Log* log = Log::getInstance();
+	std::ostringstream strs;
+	strs << origin.x << "," << origin.y << "; " << destination.x << "," << destination.y << "\n";
+	strs << angle << "; " << rotate << "; " << distance;
+	std::string str = strs.str();
+	log->writeLog(str, "out.txt", true);
+
 	Command c = createCommand(rotate, distance);
 	startCommand(c);
-
-	//TODO call mcDone(angle) in NavigationStrategist
 }
 
 void P3AT_CommandHandler::stop(void) {
@@ -81,5 +89,6 @@ double P3AT_CommandHandler::getVecDegree(double vecX, double vecY) {
 	if (angle < 0) {
 		angle += 360;
 	}
+
 	return angle;
 }

@@ -2,11 +2,14 @@
 #include "src/P3AT_RoadmapController.h"
 #include "src/P3AT_CommandHandler.h"
 #include "src/P3AT_NavigationStrategist.h"
+#include "src/Log.h"
 
 #define TIME_STEP 32
 
 int main(int argc, char **argv)
 {
+	Log* log = Log::getInstance();
+	log->writeLog("Start Robot", "out.txt", true);
 	wb_robot_init();
 	Abstract_MotorController *mc = new P3AT_MotorController();
 	Abstract_RoadmapController *rc = new P3AT_RoadmapController();

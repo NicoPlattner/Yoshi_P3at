@@ -2,7 +2,7 @@
 #include "P3AT_CommandHandler.h"
 #include "Command.h"
 
-P3AT_MOTOR_CONTROLLER::P3AT_MOTOR_CONTROLLER() : Abstract_MotorController::Abstract_MotorController() {
+P3AT_MotorController::P3AT_MotorController() : Abstract_MotorController::Abstract_MotorController() {
 	// get devices
 	WbDeviceTag front_left_wheel = wb_robot_get_device("front left wheel");
 	WbDeviceTag front_right_wheel = wb_robot_get_device("front right wheel");
@@ -23,7 +23,7 @@ P3AT_MOTOR_CONTROLLER::P3AT_MOTOR_CONTROLLER() : Abstract_MotorController::Abstr
 
 }
 
-void P3AT_MOTOR_CONTROLLER::doCommand(Command c) {
+void P3AT_MotorController::doCommand(Command c) {
 	this->currentCommand = c;
 	if (_isTurning) {
 		if (currentCommand.rotation != 0) {
@@ -40,14 +40,14 @@ void P3AT_MOTOR_CONTROLLER::doCommand(Command c) {
 }
 
 
-void P3AT_MOTOR_CONTROLLER::stop() {
+void P3AT_MotorController::stop() {
 	this->Motors->stop();
 	this->_isStopped = true;
 	this->currentCommand.isObsolete = true;
 }
 
 
-Command P3AT_MOTOR_CONTROLLER::getIntermediate() {
+Command P3AT_MotorController::getIntermediate() {
 	//TODO
 	Command c;
 
@@ -55,21 +55,21 @@ Command P3AT_MOTOR_CONTROLLER::getIntermediate() {
 }
 
 
-void P3AT_MOTOR_CONTROLLER::rotate(double degrees) {
+void P3AT_MotorController::rotate(double degrees) {
 	this->Motors->rotate(degrees);
 }
 
 
-void P3AT_MOTOR_CONTROLLER::drive(double metres) {
+void P3AT_MotorController::drive(double metres) {
 	this->Motors->drive(metres);
 }
 
-double P3AT_MOTOR_CONTROLLER::calculateDistance() {
+double P3AT_MotorController::calculateDistance() {
 	//TODO
 	return 0;
 }
 
-void P3AT_MOTOR_CONTROLLER::check() {
+void P3AT_MotorController::check() {
 	if (_isStopped) {
 		//TODO: implement call of local strategy in navigation strategist
 	}
@@ -88,10 +88,10 @@ void P3AT_MOTOR_CONTROLLER::check() {
 	}
 }
 
-void P3AT_MOTOR_CONTROLLER::fetchNextCommand() {
+void P3AT_MotorController::fetchNextCommand() {
 	commandHandler->mcDone(currentCommand.rotation);
 }
 
-void P3AT_MOTOR_CONTROLLER::addCommandHandler(P3AT_CommandHandler *ch) {
+void P3AT_MotorController::addCommandHandler(Abstract_CommandHandler *ch) {
 	commandHandler = ch;
 }

@@ -1,6 +1,7 @@
 #include "P3AT_NavigationStrategist.h"
 
-P3AT_NavigationStrategist::P3AT_NavigationStrategist(P3AT_RoadmapController *rc, P3AT_CommandHandler *ch) {
+P3AT_NavigationStrategist::P3AT_NavigationStrategist(Abstract_RoadmapController *rc, Abstract_CommandHandler *ch) 
+	: Abstract_NavigationStrategist::Abstract_NavigationStrategist(rc, ch){
 	this->roadmapController = rc;
 	this->commandHandler = ch;
 	this->commandHandler->addNavigationStrategist(this);

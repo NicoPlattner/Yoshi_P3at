@@ -4,7 +4,7 @@
 #include <math.h>
 
 
-P3AT_CommandHandler::P3AT_CommandHandler(P3AT_MOTOR_CONTROLLER *MC) : Abstract_CommandHandler() {
+P3AT_CommandHandler::P3AT_CommandHandler(Abstract_MotorController *MC) : Abstract_CommandHandler::Abstract_CommandHandler(MC) {
 	this->motorController = MC;
 	this->motorController->addCommandHandler(this);
 };
@@ -45,7 +45,7 @@ void P3AT_CommandHandler::mcDone(double rotation) {
 	navigationStrategist->mcDone(rotation);
 }
 
-void P3AT_CommandHandler::addNavigationStrategist(P3AT_NavigationStrategist *ns){
+void P3AT_CommandHandler::addNavigationStrategist(Abstract_NavigationStrategist *ns){
 	navigationStrategist = ns;
 }
 

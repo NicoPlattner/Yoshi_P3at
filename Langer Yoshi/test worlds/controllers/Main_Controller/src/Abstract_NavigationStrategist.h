@@ -1,22 +1,22 @@
+#pragma once
+
 #include<tuple>
 #include"WayPoint.h"
 
-#ifndef ABSTRACT_NAVIGATION_STRATEGIST_H
-#define ABSTRACT_NAVIGATION_STRATEGIST_H
+class Abstract_RoadmapController;
+class Abstract_CommandHandler;
 
 class Abstract_NavigationStrategist
 {
 public:
-	Abstract_NavigationStrategist() {};
+	Abstract_NavigationStrategist(Abstract_RoadmapController *rc, Abstract_CommandHandler *ch) {};
 	virtual void mcDone(double rotation) = 0; //called when motor controller is done with last command; updates position from roadmap; calls causeMotion again
 	virtual void mcDone(double rotation, WayPoint intermediate) = 0; //called if last command was interruted; updates position with "coord"
 	virtual void causeMotion() = 0; //gets next destination from roadmap and calls commandMotor; also called initially to start navigation
-private:
+protected:
 	double currentRotation = 0;
 	WayPoint currentPosition;
 };
-
-#endif
 
 /*some definitions; MOVE SOMEWHERE ELSE!
 *starting position is x = 0, y = 0

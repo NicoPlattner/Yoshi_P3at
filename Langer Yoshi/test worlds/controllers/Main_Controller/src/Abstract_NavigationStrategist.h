@@ -16,6 +16,7 @@ public:
 protected:
 	double currentRotation = 0;
 	WayPoint currentPosition;
+	bool firstComFetch = true;
 };
 
 /*some definitions; MOVE SOMEWHERE ELSE!

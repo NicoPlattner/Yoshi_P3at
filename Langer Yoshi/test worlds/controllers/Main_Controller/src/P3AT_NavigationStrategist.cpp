@@ -11,11 +11,16 @@ P3AT_NavigationStrategist::P3AT_NavigationStrategist(Abstract_RoadmapController 
 }
 
 void P3AT_NavigationStrategist::mcDone(double rotation) {
-	WayPoint newPos = roadmapController->getCoord();
-	roadmapController->delCoord();
+	if (firstComFetch == true) {
+		firstComFetch = false;
+	}
+	else {
+		WayPoint newPos = roadmapController->getCoord();
+		roadmapController->delCoord();
 
-	currentRotation += rotation;
-	currentPosition = newPos;
+		currentRotation += rotation;
+		currentPosition = newPos;
+	}
 	
 	causeMotion();
 }
@@ -26,11 +31,5 @@ void P3AT_NavigationStrategist::mcDone(double rotation, WayPoint intermediate) {
 
 void P3AT_NavigationStrategist::causeMotion() {
 	WayPoint nextWP = roadmapController->getCoord();
-	if (nextWP.isEmpty == false) {
-		commandHandler->commandMotor(currentRotation, currentPosition, nextWP);
-	}
-	else {
-		//Log* log = Log::getInstance();
-		//log->writeLog("die log funktion is scheiße", "out.txt", 1!='!');
-	}
+	commandHandler->commandMotor(currentRotation, currentPosition, nextWP);
 }

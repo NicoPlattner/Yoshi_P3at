@@ -78,7 +78,7 @@ void P3AT_MotorController::check() {
 	}
 	else if (currentCommand.isObsolete == true) {
 		Log *log = Log::getInstance();
-		log->writeLog("david macht mich traurig", "out.txt", true);
+		log->writeLog("isObsolete", "out.txt", true);
 		fetchNextCommand();
 	}
 	else if (this->Motors->isDone(_isTurning, currentCommand.distance)) {

@@ -1,6 +1,7 @@
 #include "P3AT_MotorController.h"
 #include "P3AT_CommandHandler.h"
 #include "Command.h"
+#include "Log.h"
 
 P3AT_MotorController::P3AT_MotorController() : Abstract_MotorController::Abstract_MotorController() {
 	// get devices
@@ -75,7 +76,9 @@ void P3AT_MotorController::check() {
 	if (_isStopped) {
 		//TODO: implement call of local strategy in navigation strategist
 	}
-	else if (&currentCommand == NULL || currentCommand.isObsolete) {
+	else if (currentCommand.isObsolete == true) {
+		Log *log = Log::getInstance();
+		log->writeLog("david macht mich traurig", "out.txt", true);
 		fetchNextCommand();
 	}
 	else if (this->Motors->isDone(_isTurning, currentCommand.distance)) {

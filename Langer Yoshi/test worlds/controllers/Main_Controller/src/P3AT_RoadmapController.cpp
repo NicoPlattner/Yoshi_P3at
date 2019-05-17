@@ -4,7 +4,7 @@
 
 
 WayPoint P3AT_RoadmapController::getCoord(){
-	if (roadmap.begin() == roadmap.end()) {
+	if (roadmap.size() == 0) {
 		return makeEmpty();
 	}
 	return *roadmap.begin();

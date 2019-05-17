@@ -13,34 +13,42 @@ P3AT_CommandHandler::P3AT_CommandHandler(Abstract_MotorController *MC) : Abstrac
 };
 
 void P3AT_CommandHandler::commandMotor(double currentRotation, WayPoint position, WayPoint destination) {
-	//Calculate distance with squrt( (x2 - x1)^2 + (y2 -y1)^2 ) 
-	double distXpart = pow((destination.x - position.x), 2);
-	double distYpart = pow((destination.y - position.y), 2);
-	double distance = sqrt(distXpart + distYpart);
-
-	//calculate rotation
-	double angle = getVecDegree(destination.x - position.x, destination.y - position.y);
-	double rotate = angle - currentRotation;	//subtract current rotation from angle between vector and y-axis
-
-	//The robot shouldn't rotate more than 180° as it would be quicker to rotate in the opposite direction
-	if (rotate > 180) {
-		rotate -= 360;
+	if (destination.isEmpty == true) {
+		Command c = createCommand(0, 0);
+		c.isObsolete = true;
+		motorController->doCommand(c);
 	}
-	else if (rotate < -180) {
-		rotate += 360;
+	else {
+		//Calculate distance with squrt( (x2 - x1)^2 + (y2 -y1)^2 ) 
+		double distXpart = pow((destination.x - position.x), 2);
+		double distYpart = pow((destination.y - position.y), 2);
+		double distance = sqrt(distXpart + distYpart);
+
+		//calculate rotation
+		double angle = getVecDegree(destination.x - position.x, destination.y - position.y);
+		double rotate = angle - currentRotation;	//subtract current rotation from angle between vector and y-axis
+
+		//The robot shouldn't rotate more than 180° as it would be quicker to rotate in the opposite direction
+		if (rotate > 180) {
+			rotate -= 360;
+		}
+		else if (rotate < -180) {
+			rotate += 360;
+		}
+
+		//LOG
+		Log* log = Log::getInstance();
+		std::ostringstream strs;
+		strs << position.x << "," << position.y << "; " << destination.x << "," << destination.y << "\n";
+		strs << angle << "; " << rotate << "; " << distance;
+		std::string str = strs.str();
+		log->writeLog(str, "out.txt", true);
+
+		//create and start command
+		Command c = createCommand(rotate, distance);
+		motorController->doCommand(c);
 	}
-
-	//LOG
-	Log* log = Log::getInstance();
-	std::ostringstream strs;
-	strs << position.x << "," << position.y << "; " << destination.x << "," << destination.y << "\n";
-	strs << angle << "; " << rotate << "; " << distance;
-	std::string str = strs.str();
-	log->writeLog(str, "out.txt", true);
-
-	//create and start command
-	Command c = createCommand(rotate, distance);
-	motorController->doCommand(c);
+	
 }
 
 void P3AT_CommandHandler::stop(void) {

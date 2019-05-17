@@ -8,14 +8,18 @@
 
 int main(int argc, char **argv)
 {
+	//Empty out file with append = false and write initial message
 	Log* log = Log::getInstance();
 	log->writeLog("Start Robot", "out.txt", false);
+
+	//Initialize robot and controllers
 	wb_robot_init();
 	Abstract_MotorController *mc = new P3AT_MotorController();
 	Abstract_RoadmapController *rc = new P3AT_RoadmapController();
 	Abstract_CommandHandler *ch = new P3AT_CommandHandler(mc);
 	Abstract_NavigationStrategist *navStrat = new P3AT_NavigationStrategist(rc, ch);
 
+	//Add coordinates to the roadmap that should be driven to 
 	rc->addCoord(0, 0);
 	rc->addCoord(1, -1);
 	rc->addCoord(-1, -1);
@@ -35,7 +39,7 @@ int main(int argc, char **argv)
 
 		//mc.doCommand(drive);
 		mc->doCommand(rotate);*/
-		mc->check();
+		mc->check();	//check if last command is done
 	}
 	
 	wb_robot_cleanup();

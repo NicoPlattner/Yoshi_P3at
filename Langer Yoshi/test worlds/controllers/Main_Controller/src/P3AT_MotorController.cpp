@@ -19,6 +19,8 @@ P3AT_MotorController::P3AT_MotorController() : Abstract_MotorController::Abstrac
 	double rotation_speed = 2 * M_PI; //Eine halbe Reifenumdrehung pro Sekunde
 	double umfang_wendekreis = 1.8;	//Diagonale Rad zu Rad ~ 70cm -> Kreisumfang mit der Diagonale als Annäherung in Meter
 
+	currentCommand.isObsolete = true;
+
 	this->Motors = new P3AT_Motors(motVec, radius_wheel, rotation_speed, umfang_wendekreis);
 
 }

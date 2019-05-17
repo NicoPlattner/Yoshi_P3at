@@ -33,16 +33,23 @@ void P3AT_RoadmapController::addCoord(int x, int y, int index) {
 	std::list<WayPoint> ::iterator it = roadmap.begin();
 	std::advance(it, index);
 	roadmap.insert(it, wp);
+	//TODO: error handling for too large index???
 }
 
 void P3AT_RoadmapController::delCoord() {
-	roadmap.pop_front();
+	if (! (roadmap.begin() == roadmap.end()) ) {
+		roadmap.pop_front();
+	}
+	//TODO: return value for when empty??
 }
 
 void P3AT_RoadmapController::delCoord(int index) {
-	std::list<WayPoint> ::iterator it = roadmap.begin();
-	std::advance(it, index);
-	roadmap.erase(it);
+	if (index <= roadmap.size()) {
+		std::list<WayPoint> ::iterator it = roadmap.begin();
+		std::advance(it, index);
+		roadmap.erase(it);
+	}
+	//TODO: return value for when empty??
 }
 
 WayPoint P3AT_RoadmapController::makeEmpty() {

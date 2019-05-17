@@ -116,7 +116,9 @@
     <ClCompile Include="src\P3AT_NavigationStrategist.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Log.cpp" />
+    <ClCompile Include="src\Log.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="IncludeFilter">
@@ -164,6 +166,8 @@
     <ClInclude Include="src\P3AT_NavigationStrategist.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Log.h" />
+    <ClInclude Include="src\Log.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

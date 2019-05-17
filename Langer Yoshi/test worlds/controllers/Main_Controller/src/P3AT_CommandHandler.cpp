@@ -89,9 +89,9 @@ double P3AT_CommandHandler::getVecDegree(double vecX, double vecY) {
 			angle -= 180;	//get actual angle for negative y
 		}
 	}
-	if (angle < 0) {	
+	/*if (angle < 0) {	
 		angle += 360; //angle should be a value from 0 to 360
-	}
+	}*/
 
 	return angle;
 }

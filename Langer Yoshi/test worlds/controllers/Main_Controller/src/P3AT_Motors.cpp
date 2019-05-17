@@ -48,7 +48,7 @@ void P3AT_Motors::rotate(double degree) {
 	}
 
 	_operating = true;
-	double strecke = this->UMFANG_WENDEKREIS / 360 * degree;
+	double strecke = this->UMFANG_WENDEKREIS / 360 * degree * direction;
 	double streckePerSekunde = RpsToMps(this->ROTATION_SPEED, this->RADIUS_WHEEL);
 	this->_calculatedDuration = strecke / streckePerSekunde;		//TODO: same for drive
 	this->_startTimeStamp = wb_robot_get_time();

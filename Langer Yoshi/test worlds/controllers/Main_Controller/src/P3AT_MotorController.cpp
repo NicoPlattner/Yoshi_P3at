@@ -2,6 +2,7 @@
 #include "P3AT_CommandHandler.h"
 #include "Command.h"
 #include "Log.h"
+#include <sstream>
 
 P3AT_MotorController::P3AT_MotorController() : Abstract_MotorController::Abstract_MotorController() {
 	// get devices
@@ -28,17 +29,19 @@ P3AT_MotorController::P3AT_MotorController() : Abstract_MotorController::Abstrac
 
 void P3AT_MotorController::doCommand(Command c) {
 	this->currentCommand = c;
-	if (_isTurning) {
-		if (currentCommand.rotation != 0) {
-			rotate(currentCommand.rotation);
+	if (!currentCommand.isObsolete) {
+		if (_isTurning) {
+			if (currentCommand.rotation != 0) {
+				rotate(currentCommand.rotation);
+			}
+			else {
+				_isTurning = false;
+				doCommand(currentCommand);
+			}
 		}
 		else {
-			_isTurning = false;
-			doCommand(currentCommand);
+			drive(currentCommand.distance);
 		}
-	}
-	else {
-		drive(currentCommand.distance);
 	}
 }
 
@@ -64,6 +67,11 @@ void P3AT_MotorController::rotate(double degrees) {
 
 
 void P3AT_MotorController::drive(double metres) {
+	Log *log = Log::getInstance();
+	std::ostringstream strs;
+	strs << "Driving " << metres <<  " meters\n";
+	std::string str = strs.str();
+	log->writeLog(str, "out.txt", true);
 	this->Motors->drive(metres);
 }
 
@@ -88,6 +96,7 @@ void P3AT_MotorController::check() {
 		}
 		else {
 			_isTurning = true;
+			Motors->stop();
 			fetchNextCommand();
 		}
 	}

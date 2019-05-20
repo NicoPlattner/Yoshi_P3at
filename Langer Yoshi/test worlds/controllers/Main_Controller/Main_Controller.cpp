@@ -21,25 +21,22 @@ int main(int argc, char **argv)
 
 	//Add coordinates to the roadmap that should be driven to 
 	rc->addCoord(0, 0);
-	rc->addCoord(1, -1);
-	rc->addCoord(-1, -1);
-	rc->addCoord(-1, 1);
-	rc->addCoord(1, 1);
+	rc->addCoord(2, -1);
+	rc->addCoord(0, -1);
+	rc->addCoord(0, 1);
+	rc->addCoord(2, 1);
+
+	int testCounter = 0;
 
 	// control loop
 	while (wb_robot_step(TIME_STEP) != -1) {
-		/*Command drive;
-		Command rotate;
-
-		drive.distance = 0.5;
-		drive.rotation = 0;
-
-		rotate.distance = 0;
-		rotate.rotation = 90;
-
-		//mc.doCommand(drive);
-		mc->doCommand(rotate);*/
 		mc->check();	//check if last command is done
+		if (testCounter == 1000) {
+			Log *log = Log::getInstance();
+			log->writeLog("NEW COMMAND ADDED               !!!", "out.txt", true);
+			rc->addCoord(0, 3);
+		}
+		testCounter++;
 	}
 	
 	wb_robot_cleanup();

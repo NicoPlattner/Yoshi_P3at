@@ -16,7 +16,7 @@ public:
 protected:
 	double currentRotation = 0;
 	WayPoint currentPosition;
-	bool firstComFetch = true;
+	bool noOldCommand = true; //is set to true if no command has been fetched yet, or if the roadmap was empty during last fetch 
 };
 
 /*some definitions; MOVE SOMEWHERE ELSE!

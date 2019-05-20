@@ -11,8 +11,8 @@ P3AT_NavigationStrategist::P3AT_NavigationStrategist(Abstract_RoadmapController 
 }
 
 void P3AT_NavigationStrategist::mcDone(double rotation) {
-	if (firstComFetch == true) {
-		firstComFetch = false;
+	if (noOldCommand == true) {
+		noOldCommand = false;
 	}
 	else {
 		WayPoint newPos = roadmapController->getCoord();
@@ -31,5 +31,8 @@ void P3AT_NavigationStrategist::mcDone(double rotation, WayPoint intermediate) {
 
 void P3AT_NavigationStrategist::causeMotion() {
 	WayPoint nextWP = roadmapController->getCoord();
+	if (nextWP.isEmpty) {
+		noOldCommand = true;
+	}
 	commandHandler->commandMotor(currentRotation, currentPosition, nextWP);
 }

@@ -1,0 +1,51 @@
+﻿  Accelerometer.cpp
+  Brake.cpp
+  Camera.cpp
+  Compass.cpp
+  Connector.cpp
+  Device.cpp
+  DifferentialWheels.cpp
+  Display.cpp
+  DistanceSensor.cpp
+  Emitter.cpp
+  Field.cpp
+  GPS.cpp
+  Gyro.cpp
+  InertialUnit.cpp
+  Joystick.cpp
+  Keyboard.cpp
+  LED.cpp
+  Lidar.cpp
+  LightSensor.cpp
+  Motion.cpp
+  Kompilieren...
+  Motor.cpp
+  Mouse.cpp
+  Node.cpp
+  Pen.cpp
+  PositionSensor.cpp
+  Radar.cpp
+  RangeFinder.cpp
+  Receiver.cpp
+  Robot.cpp
+c:\users\nicop\onedrive\university\4. semester\it projektarbeit 4\azuregit%20-%20p3at%20team1\langer yoshi\test worlds\controllers\includes\cpp\src\robot.cpp(446): warning C4267: "Initialisierung": Konvertierung von "size_t" nach "int", Datenverlust möglich
+c:\users\nicop\onedrive\university\4. semester\it projektarbeit 4\azuregit%20-%20p3at%20team1\langer yoshi\test worlds\controllers\includes\cpp\src\robot.cpp(456): warning C4267: "Initialisierung": Konvertierung von "size_t" nach "int", Datenverlust möglich
+  Skin.cpp
+  Speaker.cpp
+  Supervisor.cpp
+  TouchSensor.cpp
+  Main_Controller.cpp
+  Log.cpp
+  P3AT_Bumper.cpp
+  P3AT_CommandHandler.cpp
+  P3AT_MotorController.cpp
+  P3AT_Motors.cpp
+  P3AT_NavigationStrategist.cpp
+  Kompilieren...
+  P3AT_RoadmapController.cpp
+  P3AT_SensorController.cpp
+  P3AT_Ultrasound.cpp
+  Code wird generiert.
+  All 804 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Codegenerierung ist abgeschlossen.
+  Main_Controller.vcxproj -> C:\Users\nicop\OneDrive\University\4. Semester\IT Projektarbeit 4\AzureGit%20-%20P3AT%20Team1\Langer Yoshi\test worlds\controllers\Main_Controller\Main_Controller.exe

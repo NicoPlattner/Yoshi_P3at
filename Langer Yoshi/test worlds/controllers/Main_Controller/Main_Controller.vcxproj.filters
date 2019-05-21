@@ -119,6 +119,9 @@
     <ClCompile Include="src\Log.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\P3AT_SensorController.cpp" />
+    <ClCompile Include="src\P3AT_Bumper.cpp" />
+    <ClCompile Include="src\P3AT_Ultrasound.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="IncludeFilter">
@@ -159,7 +162,6 @@
     <ClInclude Include="src\WayPoint.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="Main_Controller.h" />
     <ClInclude Include="src\P3AT_CommandHandler.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -167,6 +169,24 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\Log.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Abstract_Ultrasound.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Abstract_Bumper.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Abstract_SensorController.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\P3AT_SensorController.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\P3AT_Ultrasound.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\P3AT_Bumper.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

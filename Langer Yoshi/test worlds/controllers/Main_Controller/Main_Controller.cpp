@@ -1,6 +1,7 @@
 #include "src/P3AT_MotorController.h"
 #include "src/P3AT_RoadmapController.h"
 #include "src/P3AT_CommandHandler.h"
+#include "src/Abstract_SensorController.h"
 #include "src/P3AT_NavigationStrategist.h"
 #include "src/Log.h"
 
@@ -18,6 +19,7 @@ int main(int argc, char **argv)
 	Abstract_RoadmapController *rc = new P3AT_RoadmapController();
 	Abstract_CommandHandler *ch = new P3AT_CommandHandler(mc);
 	Abstract_NavigationStrategist *navStrat = new P3AT_NavigationStrategist(rc, ch);
+	
 
 	//Add coordinates to the roadmap that should be driven to 
 	rc->addCoord(0, 0);

@@ -1,0 +1,17 @@
+0.309524das is es
+0.928571das is es
+0.619048das is es
+0.619048das is es
+0.928571das is es
+0.309524das is es
+0.928571das is es
+0.619048das is es
+0.309524das is es
+0.928571das is es
+0.619048das is es
+0.619048das is es
+0.309524das is es
+0.928571das is es
+0.619048das is es
+0.619048das is es
+1.2381das is es

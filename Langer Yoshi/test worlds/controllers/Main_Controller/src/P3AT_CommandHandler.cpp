@@ -37,12 +37,11 @@ void P3AT_CommandHandler::commandMotor(double currentRotation, WayPoint position
 		}
 
 		//LOG
-		Log* log = Log::getInstance();
 		std::ostringstream strs;
 		strs << position.x << "," << position.y << "; " << destination.x << "," << destination.y << "\n";
 		strs << angle << "; " << rotate << "; " << distance;
 		std::string str = strs.str();
-		log->writeLog(str, "out.txt", true);
+		Log::writeLog(str);
 
 		//create and start command
 		Command c = createCommand(rotate, distance);

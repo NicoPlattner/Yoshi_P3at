@@ -8,6 +8,7 @@ class Log {
 protected:
 	Log();
 public:
-	static Log* getInstance();
+	//static Log* getInstance();
 	static void writeLog(std::string msg);
+	static void emptyLog();
 };

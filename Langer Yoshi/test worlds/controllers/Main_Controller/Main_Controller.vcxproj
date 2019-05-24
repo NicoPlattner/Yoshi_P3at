@@ -171,8 +171,6 @@
     <ClCompile Include="src\P3AT_Ultrasound.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Abstract_Bumper.h" />
-    <ClInclude Include="Abstract_Ultrasound.h" />
     <ClInclude Include="src\P3AT_Bumper.h" />
     <ClInclude Include="src\Abstract_CommandHandler.h" />
     <ClInclude Include="src\Abstract_MotorController.h" />

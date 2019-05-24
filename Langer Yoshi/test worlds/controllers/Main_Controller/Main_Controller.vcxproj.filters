@@ -119,9 +119,15 @@
     <ClCompile Include="src\Log.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\P3AT_SensorController.cpp" />
-    <ClCompile Include="src\P3AT_Bumper.cpp" />
-    <ClCompile Include="src\P3AT_Ultrasound.cpp" />
+    <ClCompile Include="src\P3AT_Bumper.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\P3AT_SensorController.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\P3AT_Ultrasound.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="IncludeFilter">
@@ -169,12 +175,6 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\Log.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="Abstract_Ultrasound.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="Abstract_Bumper.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\Abstract_SensorController.h">

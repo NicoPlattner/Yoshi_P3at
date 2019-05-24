@@ -2,7 +2,7 @@
 #include <webots/distance_sensor.h>
 #include <webots/robot.h>
 
-#include "Log.cpp"
+#include "Log.h"
 
 #define MAX_SENSOR_NUMBER 16
 

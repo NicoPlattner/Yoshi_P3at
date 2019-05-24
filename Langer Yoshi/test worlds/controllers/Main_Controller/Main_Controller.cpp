@@ -10,8 +10,7 @@
 int main(int argc, char **argv)
 {
 	//Empty out file with append = false and write initial message
-	Log* log = Log::getInstance();
-	log->writeLog("Start Robot", "out.txt", false);
+	Log::emptyLog();
 
 	//Initialize robot and controllers
 	wb_robot_init();
@@ -35,8 +34,7 @@ int main(int argc, char **argv)
 	while (wb_robot_step(TIME_STEP) != -1) {
 		mc->check();	//check if last command is done
 		if (testCounter == 1000) {
-			Log *log = Log::getInstance();
-			log->writeLog("NEW COMMAND ADDED               !!!", "out.txt", true);
+			//Log::writeLog("NEW COMMAND ADDED               !!!");
 			rc->addCoord(0, 3);
 		}
 		testCounter++;

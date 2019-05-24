@@ -67,11 +67,10 @@ void P3AT_MotorController::rotate(double degrees) {
 
 
 void P3AT_MotorController::drive(double metres) {
-	Log *log = Log::getInstance();
 	std::ostringstream strs;
 	strs << "Driving " << metres <<  " meters\n";
 	std::string str = strs.str();
-	log->writeLog(str, "out.txt", true);
+	Log::writeLog(str);
 	this->Motors->drive(metres);
 }
 
@@ -85,8 +84,7 @@ void P3AT_MotorController::check() {
 		//TODO: implement call of local strategy in navigation strategist
 	}
 	else if (currentCommand.isObsolete == true) {
-		Log *log = Log::getInstance();
-		log->writeLog("isObsolete", "out.txt", true);
+		Log::writeLog("isObsolete");
 		fetchNextCommand();
 	}
 	else if (this->Motors->isDone(_isTurning, currentCommand.distance)) {

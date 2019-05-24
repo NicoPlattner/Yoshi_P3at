@@ -3,7 +3,7 @@
 #include <iterator>
 
 
-WayPoint P3AT_RoadmapController::getCoord(){
+WayPoint P3AT_RoadmapController::getCoord() {
 	if (roadmap.size() == 0) {
 		return makeEmpty();
 	}
@@ -11,9 +11,11 @@ WayPoint P3AT_RoadmapController::getCoord(){
 }
 
 WayPoint P3AT_RoadmapController::getCoord(int index) {
+	//if index out of scope, return empty Waypoint
 	if (index >= roadmap.size()) {
 		return makeEmpty();
 	}
+	//iterates through roadmap until it reaches index, returns coordinate
 	std::list<WayPoint> ::iterator it = roadmap.begin();
 	std::advance(it, index);
 	return *it;
@@ -30,6 +32,7 @@ void P3AT_RoadmapController::addCoord(int x, int y, int index) {
 	WayPoint wp;
 	wp.x = x;
 	wp.y = y;
+	//iterates through roadmap until it reaches index, inserts coordinate before index
 	std::list<WayPoint> ::iterator it = roadmap.begin();
 	std::advance(it, index);
 	roadmap.insert(it, wp);
@@ -37,7 +40,7 @@ void P3AT_RoadmapController::addCoord(int x, int y, int index) {
 }
 
 void P3AT_RoadmapController::delCoord() {
-	if (! (roadmap.begin() == roadmap.end()) ) {
+	if (!roadmap.size() == 0) {
 		roadmap.pop_front();
 	}
 	//TODO: return value for when empty??
@@ -45,6 +48,7 @@ void P3AT_RoadmapController::delCoord() {
 
 void P3AT_RoadmapController::delCoord(int index) {
 	if (index <= roadmap.size()) {
+		//iterates through roadmap until it reaches index, deletes coordinate at index
 		std::list<WayPoint> ::iterator it = roadmap.begin();
 		std::advance(it, index);
 		roadmap.erase(it);

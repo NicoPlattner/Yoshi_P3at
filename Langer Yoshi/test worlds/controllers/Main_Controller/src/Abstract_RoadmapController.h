@@ -3,7 +3,11 @@
 #include<list>
 #include "WayPoint.h"
 
-class Abstract_RoadmapController {
+//This function adds, gets and removes waypoints from the roadmap
+//roadmap functions like a stack for coordinates, if no index is specified
+
+
+class Abstract_RoadmapController {	//RC
 public:
 	Abstract_RoadmapController() {};
 	virtual WayPoint getCoord() = 0; //get coordiante from tail of roadmap (see *)

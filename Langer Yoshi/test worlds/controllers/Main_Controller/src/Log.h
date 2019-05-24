@@ -9,5 +9,5 @@ protected:
 	Log();
 public:
 	static Log* getInstance();
-	static void writeLog(std::string msg,std::string filepath, bool append);
+	static void writeLog(std::string msg);
 };

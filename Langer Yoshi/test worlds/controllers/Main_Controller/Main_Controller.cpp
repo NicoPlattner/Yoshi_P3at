@@ -1,7 +1,7 @@
 #include "src/P3AT_MotorController.h"
 #include "src/P3AT_RoadmapController.h"
 #include "src/P3AT_CommandHandler.h"
-#include "src/Abstract_SensorController.h"
+#include "src/P3AT_SensorController.h"
 #include "src/P3AT_NavigationStrategist.h"
 #include "src/Log.h"
 
@@ -19,6 +19,7 @@ int main(int argc, char **argv)
 	Abstract_RoadmapController *rc = new P3AT_RoadmapController();
 	Abstract_CommandHandler *ch = new P3AT_CommandHandler(mc);
 	Abstract_NavigationStrategist *navStrat = new P3AT_NavigationStrategist(rc, ch);
+	Abstract_SensorController *senseController = new P3AT_SensorController(navStrat);
 	
 
 	//Add coordinates to the roadmap that should be driven to 
@@ -39,6 +40,8 @@ int main(int argc, char **argv)
 			rc->addCoord(0, 3);
 		}
 		testCounter++;
+
+		senseController->checkSenses();
 	}
 	
 	wb_robot_cleanup();

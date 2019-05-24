@@ -24,17 +24,15 @@ void P3AT_Motors::setLeftWheelsSpeed(double speed) {
 void P3AT_Motors::setRightWheelsSpeed(double speed) {	
 	if (this->Motors.size() == 2) {
 		wb_motor_set_velocity(this->Motors[1], speed);
-	}
-	if (this->Motors.size() == 4) {
+	} else	if (this->Motors.size() == 4) {
 		wb_motor_set_velocity(this->Motors[2], speed);
 		wb_motor_set_velocity(this->Motors[3], speed);
 	}
 }
 
 void P3AT_Motors::setAllWheelsSpeed(double speed) {
-	std::vector<WbDeviceTag>::iterator Iter;
-	for (Iter = this->Motors.begin(); Iter != this->Motors.end(); Iter++) {
-		wb_motor_set_velocity(*Iter, speed);
+	for (auto motor : Motors) {
+		wb_motor_set_velocity(motor, speed);
 	}
 }
 

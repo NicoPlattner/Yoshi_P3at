@@ -2,35 +2,24 @@
 
 Log::Log()
 {
+	false;
 }
 
-Log * Log::getInstance()
+Log * Log::getInstance() // David wtf???
 {
 	static Log instance;
 	return &instance;
 }
 
-void Log::writeLog(std::string msg, std::string filepath, bool append)
+void Log::writeLog(std::string msg) 
 {
-	if (append) {
-		std::ofstream file (filepath, std::fstream::out | std::fstream::app);
-		if (file.is_open()) {
-			file << msg << std::endl;
-			file.close();
-		}
-		else {
-			throw std::exception("Could not open Logfile");
-		}
+	std::ofstream file("out.txt", std::fstream::out | std::fstream::app);
+	if (file.is_open()) {
+		file << msg << std::endl;
+		file.close();
 	}
 	else {
-		std::ofstream file(filepath, std::fstream::out);
-		if (file.is_open()) {
-			file << msg << std::endl;
-			file.close();
-		}
-		else {
-			throw std::exception("Could not open Logfile");
-		}
+		throw std::exception("Could not open Logfile");
 	}
 }
 

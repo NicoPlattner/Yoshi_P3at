@@ -44,8 +44,10 @@ c:\users\nicop\onedrive\university\4. semester\it projektarbeit 4\azuregit%20-%2
   Kompilieren...
   P3AT_RoadmapController.cpp
   P3AT_SensorController.cpp
+c:\users\nicop\onedrive\university\4. semester\it projektarbeit 4\azuregit%20-%20p3at%20team1\langer yoshi\test worlds\controllers\main_controller\src\p3at_sensorcontroller.cpp(14): warning C4244: "Initialisierung": Konvertierung von "double" in "int", möglicher Datenverlust
   P3AT_Ultrasound.cpp
-  Code wird generiert.
-  All 804 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Codegenerierung ist abgeschlossen.
-  Main_Controller.vcxproj -> C:\Users\nicop\OneDrive\University\4. Semester\IT Projektarbeit 4\AzureGit%20-%20P3AT%20Team1\Langer Yoshi\test worlds\controllers\Main_Controller\Main_Controller.exe
+Log.obj : error LNK2005: "public: static void __cdecl Log::writeLog(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool)" (?writeLog@Log@@SAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0_N@Z) ist bereits in Log.obj definiert.
+Log.obj : error LNK2005: "public: static void __cdecl Log::writeLog(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?writeLog@Log@@SAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) ist bereits in Log.obj definiert.
+Log.obj : error LNK2005: "public: static class Log * __cdecl Log::getInstance(void)" (?getInstance@Log@@SAPEAV1@XZ) ist bereits in Log.obj definiert.
+Log.obj : error LNK2005: "protected: __cdecl Log::Log(void)" (??0Log@@IEAA@XZ) ist bereits in Log.obj definiert.
+C:\Users\nicop\OneDrive\University\4. Semester\IT Projektarbeit 4\AzureGit%20-%20P3AT%20Team1\Langer Yoshi\test worlds\controllers\Main_Controller\Main_Controller.exe : fatal error LNK1169: Mindestens ein mehrfach definiertes Symbol gefunden.

@@ -6,9 +6,8 @@
 
 class Log {
 protected:
-	Log();
+	Log() = default;
 public:
-	//static Log* getInstance();
-	static void writeLog(std::string msg);
-	static void emptyLog();
+	static void writeLog(std::string msg);	//writes string into "out.txt" file into new line
+	static void emptyLog();		//empties "out.txt" file
 };

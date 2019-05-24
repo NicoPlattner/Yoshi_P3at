@@ -1,19 +1,13 @@
+#pragma once
+
 #include "Abstract_NavigationStrategist.h"
 #include "P3AT_RoadmapController.h"
 #include "P3AT_CommandHandler.h"
 
-#ifndef P3AT_NAVIGATION_STRATEGIST_H
-#define P3AT_NAVIGATION_STRATEGIST_H
-
-class P3AT_NavigationStrategist : public Abstract_NavigationStrategist {
+class P3AT_NavigationStrategist : public Abstract_NavigationStrategist {	//see Abstract_NavigationStrategist.h for info on functions
 public:
 	P3AT_NavigationStrategist(Abstract_RoadmapController *rc, Abstract_CommandHandler *ch);
-	void mcDone(double rotation); //called when motor controller is done with last command; updates position from roadmap; calls causeMotion again
-	void mcDone(double rotation, WayPoint intermediate); //called if last command was interruted; updates position with "coord"
-	void causeMotion(); //gets next destination from roadmap and calls commandMotor; also called initially to start navigation
-private:
-	Abstract_RoadmapController *roadmapController;
-	Abstract_CommandHandler *commandHandler;
+	void mcDone(double rotation); 
+	void mcDone(double rotation, WayPoint intermediate); 
+	void causeMotion(); 	
 };
-
-#endif

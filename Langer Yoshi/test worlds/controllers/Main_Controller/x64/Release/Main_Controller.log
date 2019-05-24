@@ -1,4 +1,6 @@
-﻿  Accelerometer.cpp
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppClean.targets(76,5): warning : Der Prozess kann nicht auf die Datei "c:\users\leon\desktop\fh\4. semester\itp\repo\azuregit%20-%20p3at%20team1\langer yoshi\test worlds\controllers\main_controller\x64\release\lightsensor.obj" zugreifen, da sie von einem anderen Prozess verwendet wird.
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppClean.targets(76,5): warning : Der Prozess kann nicht auf die Datei "c:\users\leon\desktop\fh\4. semester\itp\repo\azuregit%20-%20p3at%20team1\langer yoshi\test worlds\controllers\main_controller\x64\release\node.obj" zugreifen, da sie von einem anderen Prozess verwendet wird.
+  Accelerometer.cpp
   Brake.cpp
   Camera.cpp
   Compass.cpp

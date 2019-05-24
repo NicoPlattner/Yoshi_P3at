@@ -7,13 +7,14 @@
 
 
 P3AT_CommandHandler::P3AT_CommandHandler(Abstract_MotorController *MC) : Abstract_CommandHandler::Abstract_CommandHandler(MC) {
-	//add pointer of MC to CH and of CH to MC
+	//add pointer of MC to CH and of CH to MC (2-ways communication)
 	this->motorController = MC;
 	this->motorController->addCommandHandler(this);
 };
 
 void P3AT_CommandHandler::commandMotor(double currentRotation, WayPoint position, WayPoint destination) {
-	if (destination.isEmpty == true) {
+	if (destination.isEmpty == true) {	
+		//if there are no more destinations, create obsolete command
 		Command c = createCommand(0, 0);
 		c.isObsolete = true;
 		motorController->doCommand(c);
@@ -96,9 +97,6 @@ double P3AT_CommandHandler::getVecDegree(double vecX, double vecY) {
 			angle -= 180;	//get actual angle for negative y
 		}
 	}
-	/*if (angle < 0) {	
-		angle += 360; //angle should be a value from 0 to 360
-	}*/
 
 	return angle;
 }

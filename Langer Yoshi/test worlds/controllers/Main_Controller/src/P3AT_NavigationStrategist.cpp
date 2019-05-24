@@ -4,22 +4,26 @@
 P3AT_NavigationStrategist::P3AT_NavigationStrategist(Abstract_RoadmapController *rc, Abstract_CommandHandler *ch) 
 	: Abstract_NavigationStrategist::Abstract_NavigationStrategist(rc, ch){
 	this->roadmapController = rc;
+	//add pointer of NS to CH and of CH to NS (2-ways communication)
 	this->commandHandler = ch;
 	this->commandHandler->addNavigationStrategist(this);
+	//set current position to (0, 0)
 	this->currentPosition.x = 0;
 	this->currentPosition.y = 0;
 }
 
 void P3AT_NavigationStrategist::mcDone(double rotation) {
-	if (noOldCommand == true) {
-		noOldCommand = false;
+	if (noOldWayPoint == true) {	//if there is no old way point to discard skip the discarding step
+		noOldWayPoint = false;
 	}
-	else {
+	else {	
+		//update position with last destination and then discard it
 		WayPoint newPos = roadmapController->getCoord();
+		currentPosition = newPos;
 		roadmapController->delCoord();
 
+		//update position with parsed value
 		currentRotation += rotation;
-		currentPosition = newPos;
 	}
 	
 	causeMotion();
@@ -30,9 +34,12 @@ void P3AT_NavigationStrategist::mcDone(double rotation, WayPoint intermediate) {
 }
 
 void P3AT_NavigationStrategist::causeMotion() {
+	//get next destination
 	WayPoint nextWP = roadmapController->getCoord();
+
+	//if there are no destinations left set noOldWayPoint to true
 	if (nextWP.isEmpty) {
-		noOldCommand = true;
+		noOldWayPoint = true;
 	}
 	commandHandler->commandMotor(currentRotation, currentPosition, nextWP);
 }

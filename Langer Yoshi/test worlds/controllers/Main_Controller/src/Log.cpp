@@ -23,3 +23,5 @@ void Log::emptyLog() {
 		throw std::exception("Could not open Logfile");
 	}
 }
+
+

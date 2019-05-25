@@ -122,8 +122,12 @@
     <ClCompile Include="src\stdafx.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\includes\cpp\src\Motor.cpp" />
-    <ClCompile Include="..\includes\cpp\src\Accelerometer.cpp" />
+    <ClCompile Include="..\includes\cpp\src\Accelerometer.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Motor.cpp">
+      <Filter>IncludeFilter</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="IncludeFilter">

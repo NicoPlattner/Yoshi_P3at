@@ -53,9 +53,9 @@ void P3AT_MotorController::stop() {
 }
 
 
-Command P3AT_MotorController::getIntermediate() {
+WayPoint P3AT_MotorController::getIntermediate() {
 	//TODO
-	Command c;
+	WayPoint c;
 
 	return c;
 }

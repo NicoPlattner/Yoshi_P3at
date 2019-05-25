@@ -1,9 +1,8 @@
+#pragma once
+
 #include "Abstract_RoadmapController.h"
 
-#ifndef P3AT_ROADMAP_CONTROLLER_H
-#define P3AT_ROADMAP_CONTROLLER_H
-
-class P3AT_RoadmapController : public Abstract_RoadmapController{ //see Abstract_RoadmapController.h for info on functions
+class P3AT_RoadmapController : public Abstract_RoadmapController{ //see Abstract_RoadmapController.h for more information
 public:
 	P3AT_RoadmapController() {};
 	WayPoint getCoord();
@@ -13,7 +12,5 @@ public:
 	void delCoord();
 	void delCoord(int index);
 protected:
-	WayPoint makeEmpty();
+	WayPoint makeEmpty();	//creates empty WayPoint for when roadmap is empty
 };
-
-#endif

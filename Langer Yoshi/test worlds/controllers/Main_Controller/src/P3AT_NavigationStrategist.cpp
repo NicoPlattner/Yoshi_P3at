@@ -43,3 +43,11 @@ void P3AT_NavigationStrategist::causeMotion() {
 	}
 	commandHandler->commandMotor(currentRotation, currentPosition, nextWP);
 }
+
+void P3AT_NavigationStrategist::stopMotors() {
+	commandHandler->stop();
+}
+
+void P3AT_NavigationStrategist::updateWorldmap(double * sensorData) {
+	//TODO
+}

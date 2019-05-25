@@ -169,6 +169,7 @@
     <ClCompile Include="src\P3AT_RoadmapController.cpp" />
     <ClCompile Include="src\P3AT_SensorController.cpp" />
     <ClCompile Include="src\P3AT_Ultrasound.cpp" />
+    <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\P3AT_Bumper.h" />
@@ -188,6 +189,7 @@
     <ClInclude Include="src\P3AT_RoadmapController.h" />
     <ClInclude Include="src\P3AT_SensorController.h" />
     <ClInclude Include="src\WayPoint.h" />
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

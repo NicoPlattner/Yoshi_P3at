@@ -5,26 +5,24 @@
 #include <webots/robot.h>
 #include <math.h>
 
+class Abstract_CommandHandler;	//CH
 
-
-class Abstract_CommandHandler;
-
-class P3AT_MotorController : public Abstract_MotorController {
+class P3AT_MotorController : public Abstract_MotorController {	//see Abstract_MotorController.h for more information
 public:
 	P3AT_MotorController();
 	void doCommand(Command cmd);
 	void stop(void);
-	Command getIntermediate(void);
+	WayPoint getIntermediate(void);
 	void check();
 	void addCommandHandler(Abstract_CommandHandler *ch);
 private:
-	P3AT_Motors *Motors;
-	bool _isStopped = false;
-	bool _isTurning = true;
-	void rotate(double degrees);
-	void drive(double metres);
-	double calculateDistance();
-	void fetchNextCommand();
+	void rotate(double degrees);	//calls rotate in Motors
+	void drive(double metres);		//calls drive in Motors
+	double calculateDistance();		//TODO ???
+	void fetchNextCommand();		//requests new command from CH
+
 	Command currentCommand;
 	Abstract_CommandHandler *commandHandler;
+	bool _isStopped = false;	//is true if the robot had to stop prematurely and causes alternate navigation strategy
+	bool _isTurning = true;		//is true if the rotate part of the current command is not yet done
 };

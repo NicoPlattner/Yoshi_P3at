@@ -1,11 +1,10 @@
 #pragma once
 
-#include<list>
+#include <list>
 #include "WayPoint.h"
 
 //This function adds, gets and removes waypoints from the roadmap
 //roadmap functions like a stack for coordinates, if no index is specified
-
 
 class Abstract_RoadmapController {	//RC
 public:
@@ -17,7 +16,6 @@ public:
 	virtual void delCoord() = 0; //delete coordinate at tail of list
 	virtual void delCoord(int index) = 0; //delete coordinate at index
 protected:
-	virtual WayPoint makeEmpty() = 0;	//creates empty WayPoint for when roadmap is empty
 	std::list<WayPoint> roadmap;
 };
 

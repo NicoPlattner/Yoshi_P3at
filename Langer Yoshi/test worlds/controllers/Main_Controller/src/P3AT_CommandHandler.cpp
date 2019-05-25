@@ -1,10 +1,9 @@
+#include "stdafx.h"
+
 #include "P3AT_CommandHandler.h"
 #include "P3AT_MotorController.h"
 #include "P3AT_NavigationStrategist.h"
-#include <math.h>
 #include "Log.h"
-#include <sstream>
-
 
 P3AT_CommandHandler::P3AT_CommandHandler(Abstract_MotorController *MC) : Abstract_CommandHandler::Abstract_CommandHandler(MC) {
 	//add pointer of MC to CH and of CH to MC (2-ways communication)

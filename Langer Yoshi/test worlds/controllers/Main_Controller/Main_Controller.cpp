@@ -1,3 +1,5 @@
+#include "src/stdafx.h"
+
 #include "src/P3AT_MotorController.h"
 #include "src/P3AT_RoadmapController.h"
 #include "src/P3AT_CommandHandler.h"

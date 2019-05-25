@@ -1,5 +1,4 @@
-#ifndef COMMAND_H
-#define COMMAND_H
+#pragma once
 
 //the command handler creates commands for the motor controller
 
@@ -8,6 +7,3 @@ struct Command {
 	double distance = 0;	//distance the robot should move in meters
 	bool isObsolete = false;	//is set if the command can't be completed; MC will fetch the next command if this is set
 };
-
-
-#endif

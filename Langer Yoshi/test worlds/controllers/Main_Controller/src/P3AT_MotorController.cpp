@@ -1,8 +1,9 @@
+#include "stdafx.h"
+
 #include "P3AT_MotorController.h"
 #include "P3AT_CommandHandler.h"
 #include "Command.h"
 #include "Log.h"
-#include <sstream>
 
 P3AT_MotorController::P3AT_MotorController() : Abstract_MotorController::Abstract_MotorController() {
 	// get devices

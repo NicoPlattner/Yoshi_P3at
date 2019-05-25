@@ -2,8 +2,6 @@
 
 #include "Abstract_MotorController.h"
 #include "P3AT_Motors.h"
-#include <webots/robot.h>
-#include <math.h>
 
 class Abstract_CommandHandler;	//CH
 

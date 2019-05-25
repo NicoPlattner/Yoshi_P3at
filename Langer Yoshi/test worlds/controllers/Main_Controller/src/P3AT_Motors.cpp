@@ -1,8 +1,6 @@
-#include "P3AT_Motors.h"
-#include <webots/robot.h>
+#include "stdafx.h"
 
-#include <iostream>
-#include <fstream>
+#include "P3AT_Motors.h"
 
 P3AT_Motors::P3AT_Motors(std::vector<WbDeviceTag> motors, double radius_wheel, double rotation_speed, double umfang_wendekreis)
 	: Abstract_Motors(motors, radius_wheel, rotation_speed, umfang_wendekreis){

@@ -1,6 +1,5 @@
 #pragma once
 
-#include <list>
 #include "WayPoint.h"
 
 //This function adds, gets and removes waypoints from the roadmap

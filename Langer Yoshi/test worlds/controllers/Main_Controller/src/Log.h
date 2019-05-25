@@ -1,9 +1,5 @@
 #pragma once
 
-#include <iostream>
-#include <fstream>
-#include <string>
-
 class Log {
 protected:
 	Log() = default;

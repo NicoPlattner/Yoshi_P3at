@@ -1,8 +1,5 @@
 #pragma once
 
-#include <vector>
-#include <webots/motor.h>
-
 //This class holds the robot's motors and acts as an abstraction layer. It also checks if the latest command is done
 
 class Abstract_Motors {

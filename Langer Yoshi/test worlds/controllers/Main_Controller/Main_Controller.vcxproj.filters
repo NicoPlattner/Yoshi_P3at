@@ -1,12 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="..\includes\cpp\src\Accelerometer.cpp">
-      <Filter>IncludeFilter</Filter>
-    </ClCompile>
-    <ClCompile Include="..\includes\cpp\src\Brake.cpp">
-      <Filter>IncludeFilter</Filter>
-    </ClCompile>
     <ClCompile Include="..\includes\cpp\src\Camera.cpp">
       <Filter>IncludeFilter</Filter>
     </ClCompile>
@@ -59,9 +53,6 @@
       <Filter>IncludeFilter</Filter>
     </ClCompile>
     <ClCompile Include="..\includes\cpp\src\Motion.cpp">
-      <Filter>IncludeFilter</Filter>
-    </ClCompile>
-    <ClCompile Include="..\includes\cpp\src\Motor.cpp">
       <Filter>IncludeFilter</Filter>
     </ClCompile>
     <ClCompile Include="..\includes\cpp\src\Mouse.cpp">
@@ -128,7 +119,11 @@
     <ClCompile Include="src\P3AT_Ultrasound.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="src\stdafx.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\includes\cpp\src\Motor.cpp" />
+    <ClCompile Include="..\includes\cpp\src\Accelerometer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="IncludeFilter">
@@ -190,6 +185,8 @@
     <ClInclude Include="src\P3AT_Bumper.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="src\stdafx.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

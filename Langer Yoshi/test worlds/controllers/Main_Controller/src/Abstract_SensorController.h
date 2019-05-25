@@ -1,4 +1,5 @@
 #pragma once
+
 #include "Abstract_NavigationStrategist.h"
 
 class Abstract_SensorController {

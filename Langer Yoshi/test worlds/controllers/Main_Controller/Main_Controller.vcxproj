@@ -127,7 +127,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\includes\cpp\src\Accelerometer.cpp" />
-    <ClCompile Include="..\includes\cpp\src\Brake.cpp" />
     <ClCompile Include="..\includes\cpp\src\Camera.cpp" />
     <ClCompile Include="..\includes\cpp\src\Compass.cpp" />
     <ClCompile Include="..\includes\cpp\src\Connector.cpp" />
@@ -159,17 +158,41 @@
     <ClCompile Include="..\includes\cpp\src\Speaker.cpp" />
     <ClCompile Include="..\includes\cpp\src\Supervisor.cpp" />
     <ClCompile Include="..\includes\cpp\src\TouchSensor.cpp" />
-    <ClCompile Include="Main_Controller.cpp" />
-    <ClCompile Include="src\Log.cpp" />
-    <ClCompile Include="src\P3AT_Bumper.cpp" />
-    <ClCompile Include="src\P3AT_CommandHandler.cpp" />
-    <ClCompile Include="src\P3AT_MotorController.cpp" />
-    <ClCompile Include="src\P3AT_Motors.cpp" />
-    <ClCompile Include="src\P3AT_NavigationStrategist.cpp" />
-    <ClCompile Include="src\P3AT_RoadmapController.cpp" />
-    <ClCompile Include="src\P3AT_SensorController.cpp" />
-    <ClCompile Include="src\P3AT_Ultrasound.cpp" />
-    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Main_Controller.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src\stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="src\Log.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\P3AT_Bumper.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\P3AT_CommandHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\P3AT_MotorController.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\P3AT_Motors.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\P3AT_NavigationStrategist.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\P3AT_RoadmapController.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\P3AT_SensorController.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\P3AT_Ultrasound.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\P3AT_Bumper.h" />
@@ -188,8 +211,8 @@
     <ClInclude Include="src\P3AT_NavigationStrategist.h" />
     <ClInclude Include="src\P3AT_RoadmapController.h" />
     <ClInclude Include="src\P3AT_SensorController.h" />
+    <ClInclude Include="src\stdafx.h" />
     <ClInclude Include="src\WayPoint.h" />
-    <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

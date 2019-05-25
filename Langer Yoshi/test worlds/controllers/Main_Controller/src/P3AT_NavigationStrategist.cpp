@@ -1,3 +1,5 @@
+#include "stdafx.h"
+
 #include "P3AT_NavigationStrategist.h"
 #include "Log.h"
 

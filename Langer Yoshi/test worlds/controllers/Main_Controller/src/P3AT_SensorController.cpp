@@ -1,7 +1,6 @@
-#include "P3AT_SensorController.h"
-#include <webots/distance_sensor.h>
-#include <webots/robot.h>
+#include "stdafx.h"
 
+#include "P3AT_SensorController.h"
 #include "Log.h"
 
 #define MAX_SENSOR_NUMBER 16

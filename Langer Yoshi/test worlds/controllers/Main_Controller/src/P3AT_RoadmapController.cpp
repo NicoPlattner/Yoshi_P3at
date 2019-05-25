@@ -1,6 +1,6 @@
+#include "stdafx.h"
+
 #include "P3AT_RoadmapController.h"
-#include "../../includes/c/webots/robot.h"
-#include <iterator>
 
 
 WayPoint P3AT_RoadmapController::getCoord() {

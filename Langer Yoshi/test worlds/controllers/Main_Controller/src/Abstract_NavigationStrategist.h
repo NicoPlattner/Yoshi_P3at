@@ -1,6 +1,6 @@
 #pragma once
 
-#include"WayPoint.h"
+#include "WayPoint.h"
 
 class Abstract_RoadmapController;	//RC
 class Abstract_CommandHandler;		//CH

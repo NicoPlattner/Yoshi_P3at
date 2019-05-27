@@ -29,13 +29,7 @@ int main(int argc, char **argv)
 	rc->addCoord(1, -1);
 	rc->addCoord(-1, -1);
 	rc->addCoord(-1, 1);
-	rc->addCoord(5.5, 1);
-	rc->addCoord(4.5, 2);
-	rc->addCoord(3.5, 2.5);
-	rc->addCoord(2.5, 2.5);
-	rc->addCoord(1.5, 2);
-	rc->addCoord(0.5, 1);
-
+	rc->addCoord(0, 1);
 
 	int testCounter = 0;
 

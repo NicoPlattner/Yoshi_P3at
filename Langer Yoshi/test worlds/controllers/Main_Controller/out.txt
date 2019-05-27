@@ -1,718 +1,274 @@
 isObsolete
-0,0; 2,1
-63.4349; 63.4349; 2.23607
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-Driving 2.23607 meters
+0,0; 20,0
+90; 90; 20
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Driving 20 meters
 
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-2,1; 0,1
-270; -153.435; 2
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-Driving 2 meters
-
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-0,1; 0,-1
--180; -90; 2
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-Driving 2 meters
-
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-0,-1; 2,-1
-90; -90; 2
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-Driving 2 meters
-
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-2,-1; 0,0
--63.4349; -153.435; 2.23607
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-Driving 2.23607 meters
-
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
--nan(ind)
-isObsolete
--nan(ind)
-isObsolete
--nan(ind)
-isObsolete
--nan(ind)
-isObsolete
--nan(ind)
-isObsolete
--nan(ind)
-isObsolete
--nan(ind)
-isObsolete
--nan(ind)
-isObsolete
--nan(ind)
-isObsolete
--nan(ind)
-isObsolete
--nan(ind)
-isObsolete
--nan(ind)
-isObsolete
--nan(ind)
-isObsolete
--nan(ind)
-isObsolete
--nan(ind)
-isObsolete
--nan(ind)
-isObsolete
--nan(ind)
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 0.000000
+Sensor: 2.846070
+Sensor: 7.651507
+Sensor: 12.336840
+Sensor: 16.970930
+Sensor: 21.197675
+Sensor: 26.198862
+Sensor: 30.722635
+Sensor: 35.352744
+Sensor: 40.188412
+Sensor: 44.801049
+Sensor: 49.414981
+Sensor: 53.819298
+Sensor: 59.486324
+Sensor: 62.960131
+Sensor: 67.236205
+Sensor: 71.127478
+Sensor: 76.961015
+Sensor: 81.176523
+Sensor: 87.202643
+Sensor: 90.355455
+Sensor: 95.289125

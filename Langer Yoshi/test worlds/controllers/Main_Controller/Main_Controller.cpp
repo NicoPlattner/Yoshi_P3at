@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 	rc->addCoord(2, -1);
 	rc->addCoord(0, -1);
 	rc->addCoord(0, 1);
-	rc->addCoord(2, 1);
+	rc->addCoord(20, 0);
 
 	int testCounter = 0;
 

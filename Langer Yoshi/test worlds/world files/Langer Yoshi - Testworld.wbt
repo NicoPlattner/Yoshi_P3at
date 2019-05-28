@@ -18,10 +18,10 @@ Viewpoint {
   position 1.264294236427025 27.907464620126895 -1.1809195221808009
   followOrientation TRUE
 }
-TexturedBackground {
-  texture "noon_park_empty"
+Pioneer3at {
+  controller "Main_Controller"
 }
-TexturedBackgroundLight {
+TexturedBackground {
   texture "noon_park_empty"
 }
 Solid {
@@ -466,12 +466,4 @@ Solid {
   ]
   name "rectangle arena"
   model "rectangle arena"
-}
-Gnome {
-  translation 0 0 1.7400000000000007
-}
-Pioneer3at {
-  translation -9.14719479774903e-08 0.1076110694861511 -8.525999988134858e-05
-  rotation 0.9999999753290796 3.1346932872560966e-05 -0.00021990727569954602 -0.0007752589694074774
-  controller "Main_Controller"
 }

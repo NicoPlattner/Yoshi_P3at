@@ -12,3 +12,7 @@
 #include <webots/motor.h>
 #include <webots/robot.h>
 #include <webots/distance_sensor.h>
+#include <webots/touch_sensor.h>
+
+//logger
+#include "Log.h"

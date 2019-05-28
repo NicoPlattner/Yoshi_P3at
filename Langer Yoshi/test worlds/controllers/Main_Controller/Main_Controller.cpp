@@ -24,11 +24,13 @@ int main(int argc, char **argv)
 	
 
 	//Add coordinates to the roadmap that should be driven to 
+	rc->addCoord(-10, 20);
 	rc->addCoord(0, 0);
-	rc->addCoord(2, -1);
-	rc->addCoord(0, -1);
+	rc->addCoord(1, 1);
+	rc->addCoord(1, -1);
+	rc->addCoord(-1, -1);
+	rc->addCoord(-1, 1);
 	rc->addCoord(0, 1);
-	rc->addCoord(20, 0);
 
 	int testCounter = 0;
 
@@ -37,7 +39,7 @@ int main(int argc, char **argv)
 		mc->check();	//check if last command is done
 		if (testCounter == 1000) {
 			//Log::writeLog("NEW COMMAND ADDED               !!!");
-			rc->addCoord(0, 3);
+			//rc->addCoord(0, 3);
 		}
 		testCounter++;
 

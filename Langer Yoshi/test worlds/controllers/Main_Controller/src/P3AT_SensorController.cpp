@@ -16,8 +16,8 @@ P3AT_SensorController::P3AT_SensorController(Abstract_NavigationStrategist *ns) 
 
 void P3AT_SensorController::checkSenses() 
 {
-	if (ultrasound->getData() >= 100) {
-		//navigationStrategist->stopMotors();
+	if (ultrasound->getData() >= 800) {
+		navigationStrategist->stopMotors();
 	}
 
 	if (bumper->getData()) {

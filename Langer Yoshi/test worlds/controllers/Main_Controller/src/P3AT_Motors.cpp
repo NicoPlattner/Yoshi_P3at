@@ -1,14 +1,15 @@
 #include "stdafx.h"
 
 #include "P3AT_Motors.h"
+#include "Log.h"
 
 P3AT_Motors::P3AT_Motors(std::vector<WbDeviceTag> motors, double radius_wheel, double rotation_speed, double umfang_wendekreis)
-	: Abstract_Motors(motors, radius_wheel, rotation_speed, umfang_wendekreis){
+	: Abstract_Motors(motors, radius_wheel, rotation_speed, umfang_wendekreis) {
 	this->RADIUS_WHEEL = radius_wheel;
 	this->ROTATION_SPEED = rotation_speed;
 	this->UMFANG_WENDEKREIS = umfang_wendekreis;
 	this->_motors = motors;
-	
+
 	for (auto motor : _motors) {
 		wb_motor_set_position(motor, INFINITY);	//this is required for webots to function correctly
 	}
@@ -23,10 +24,11 @@ void P3AT_Motors::setLeftWheelsSpeed(double speed) {
 		wb_motor_set_velocity(this->_motors[1], speed);
 	}
 }
-void P3AT_Motors::setRightWheelsSpeed(double speed) {	
+void P3AT_Motors::setRightWheelsSpeed(double speed) {
 	if (this->_motors.size() == 2) {
 		wb_motor_set_velocity(this->_motors[1], speed);
-	} else	if (this->_motors.size() == 4) {
+	}
+	else	if (this->_motors.size() == 4) {
 		wb_motor_set_velocity(this->_motors[2], speed);
 		wb_motor_set_velocity(this->_motors[3], speed);
 	}
@@ -40,22 +42,19 @@ void P3AT_Motors::setAllWheelsSpeed(double speed) {
 
 void P3AT_Motors::rotate(double degree) {
 	int direction;
-	if (degree > 0) {
-		direction = 1;
-	}
-	else {
-		direction = -1;
-	}
+	direction = degree > 0 ? 1 : -1;
 
-	double strecke = this->UMFANG_WENDEKREIS / 360 * degree * direction;
-	double streckePerSekunde = RpsToMps(this->ROTATION_SPEED, this->RADIUS_WHEEL);
-	this->_calculatedDuration = strecke / streckePerSekunde;		//TODO: same for drive
+	this->_distanceDriven = 0;
 	this->_startTimeStamp = wb_robot_get_time();
+	std::ostringstream strs;
+	strs << "new Dist.: " << this->_distanceDriven << " Meter\n";
+	strs << "new Time: " << this->_startTimeStamp << " Sek\n";
+	std::string str = strs.str();
+	Log::writeLog(str);
 	this->setLeftWheelsSpeed(direction*this->ROTATION_SPEED);
 	this->setRightWheelsSpeed((-direction)*this->ROTATION_SPEED);
-
 }
-void P3AT_Motors::drive(double distance) {		
+void P3AT_Motors::drive(double distance) {
 	this->_distanceDriven = 0;
 	this->_startTimeStamp = wb_robot_get_time();
 	if (distance > 0) {
@@ -66,22 +65,42 @@ void P3AT_Motors::drive(double distance) {
 	}
 }
 
-void P3AT_Motors::recalcDistance() {	//TODO: add rotation (srly why wasn't it from the start?)
-	double intermediateTime = wb_robot_get_time() - this->_startTimeStamp;
-	this->_startTimeStamp = wb_robot_get_time();
-	this->_distanceDriven += (RpsToMps(wb_motor_get_velocity(this->_motors[0]), this->RADIUS_WHEEL) * intermediateTime);
+void P3AT_Motors::recalcDistance(bool isTurning) {
+	if (isTurning) {
+		double intermediateTime = wb_robot_get_time() - this->_startTimeStamp;
+		this->_startTimeStamp = wb_robot_get_time();
+		double currentSpeed = RpsToMps(wb_motor_get_velocity(this->_motors[0]), this->RADIUS_WHEEL) * (0.390 / 0.473);	//komplizierte Formel für dreh geschwindigkeit :O
+		this->_distanceDriven += currentSpeed * intermediateTime;
+	}
+	else {
+		double intermediateTime = wb_robot_get_time() - this->_startTimeStamp;
+		this->_startTimeStamp = wb_robot_get_time();
+		this->_distanceDriven += (RpsToMps(wb_motor_get_velocity(this->_motors[0]), this->RADIUS_WHEEL) * intermediateTime);
+	}
+
 }
 
-bool P3AT_Motors::isDone(bool isTurning, double distance) {
+bool P3AT_Motors::isDone(bool isTurning, double distance, double degree) {
 	if (isTurning) {
-		if (wb_robot_get_time() - this->_startTimeStamp >= _calculatedDuration) {
+		recalcDistance(true);
+		double tmp = this->_distanceDriven;
+		std::ostringstream strs;
+		strs << "DistTmp: " << tmp << "\n";
+		std::string str = strs.str();
+		Log::writeLog(str);
+		if (abs(degreeToDistance(degree)) - 0.01 < abs(this->_distanceDriven)) {
+
+			strs << "Gedreht: " << degree << " Grad, mit Distanz:" << degreeToDistance(degree) << " Meter\n";
+			strs << "Distanz gefahren: " << this->_distanceDriven << "\n";
+			std::string str = strs.str();
+			Log::writeLog(str);
 			this->setAllWheelsSpeed(0);
 			return true;
 		}
 	}
 	else {
-		recalcDistance();			//TODO: can we please have this be useful for either mode or not use it
-		if (abs(distance) <= abs(this->_distanceDriven)) {
+		recalcDistance(false);
+		if (abs(distance) - 0.01 < abs(this->_distanceDriven)) {
 			this->setAllWheelsSpeed(0);
 			return true;
 		}
@@ -100,5 +119,9 @@ void P3AT_Motors::stop(void) {
 *Return: Speed in meters per second
 */
 double P3AT_Motors::RpsToMps(double rps, double radius) {
-	return rps*radius;
+	return rps * radius;
+}
+
+double P3AT_Motors::degreeToDistance(double rotationDegree) {
+	return (rotationDegree / 360.0) * this->UMFANG_WENDEKREIS;
 }

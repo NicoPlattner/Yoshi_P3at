@@ -20,7 +20,7 @@ P3AT_MotorController::P3AT_MotorController() : Abstract_MotorController::Abstrac
 
 	double radius_wheel = 0.10;	//Reifenradius ~10cm???
 	double rotation_speed = 2 * M_PI; //Eine halbe Reifenumdrehung pro Sekunde
-	double umfang_wendekreis = 1.8;	//Diagonale Rad zu Rad ~ 70cm -> Kreisumfang mit der Diagonale als Annäherung in Meter
+	double umfang_wendekreis = 1.6336;	//Diagonale Rad zu Rad ~ 70cm -> Kreisumfang mit der Diagonale als Annäherung in Meter (1.6336)
 
 	currentCommand.isObsolete = true;
 
@@ -88,7 +88,7 @@ void P3AT_MotorController::check() {
 		Log::writeLog("isObsolete");
 		fetchNextCommand();
 	}
-	else if (this->Motors->isDone(_isTurning, currentCommand.distance)) {
+	else if (this->Motors->isDone(_isTurning, currentCommand.distance, currentCommand.rotation)) {
 		if (_isTurning) {
 			_isTurning = false;
 			doCommand(currentCommand);

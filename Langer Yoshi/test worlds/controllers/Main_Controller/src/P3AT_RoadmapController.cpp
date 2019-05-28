@@ -21,14 +21,14 @@ WayPoint P3AT_RoadmapController::getCoord(int index) {
 	return *it;
 }
 
-void P3AT_RoadmapController::addCoord(int x, int y) {
+void P3AT_RoadmapController::addCoord(double x, double y) {
 	WayPoint wp;
 	wp.x = x;
 	wp.y = y;
 	roadmap.push_front(wp);
 }
 
-void P3AT_RoadmapController::addCoord(int x, int y, int index) {
+void P3AT_RoadmapController::addCoord(double x, double y, int index) {
 	WayPoint wp;
 	wp.x = x;
 	wp.y = y;

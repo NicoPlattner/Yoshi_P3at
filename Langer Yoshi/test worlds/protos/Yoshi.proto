@@ -4,7 +4,7 @@
 # documentation url: https://www.cyberbotics.com/doc/guide/pioneer-3at
 # Pioneer 3AT robot (Adept MobileRobots) is an all terrain four wheels drive robot.
 
-PROTO Pioneer3at [
+PROTO Yoshi [
   field SFVec3f    translation     0 0.11 0       # Is `Transform.translation`.
   field SFRotation rotation        0 1 0 0        # Is `Transform.rotation`.
   field SFString   name            "Pioneer 3-AT" # Is `Solid.name`.

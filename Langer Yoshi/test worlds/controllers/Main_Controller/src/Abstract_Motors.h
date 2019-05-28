@@ -8,7 +8,7 @@ public:
 	virtual void rotate(double degree) = 0;	//robot turns on the spot; negative degrees cuases left turn, positive right turn
 	virtual void drive(double distance) = 0;	//move forward in a straight line for "distance" meters
 	virtual void stop(void) = 0;	//sets motor speed to 0
-	virtual bool isDone(bool isTurning, double distance) = 0;	//checks if latest command is done
+	virtual bool isDone(bool isTurning, double distance, double degree) = 0;	//checks if latest command is done
 protected:
 	double RADIUS_WHEEL;
 	double ROTATION_SPEED;

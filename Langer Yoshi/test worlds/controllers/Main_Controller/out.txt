@@ -1,479 +1,405 @@
 isObsolete
-0,0; 20,0
-90; 90; 20
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Driving 20 meters
+0,0; 0,1
+0; 0; 1
+Driving 1 meters
 
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 0.000000
-Bumper: 1.000000
-Bumper: 1.000000
-Bumper: 1.000000
-Bumper: 1.000000
-Bumper: 1.000000
-Bumper: 1.000000
+0,1; -1,1
+270; -90; 1
+new Dist.: 0 Meter
+new Time: 1.632 Sek
+
+DistTmp: -0.016578
+
+DistTmp: -0.0331561
+
+DistTmp: -0.0497341
+
+DistTmp: -0.0663122
+
+DistTmp: -0.0828902
+
+DistTmp: -0.0994683
+
+DistTmp: -0.116046
+
+DistTmp: -0.132624
+
+DistTmp: -0.149202
+
+DistTmp: -0.16578
+
+DistTmp: -0.182358
+
+DistTmp: -0.198937
+
+DistTmp: -0.215515
+
+DistTmp: -0.232093
+
+DistTmp: -0.248671
+
+DistTmp: -0.265249
+
+DistTmp: -0.281827
+
+DistTmp: -0.298405
+
+DistTmp: -0.314983
+
+DistTmp: -0.331561
+
+DistTmp: -0.348139
+
+DistTmp: -0.364717
+
+DistTmp: -0.381295
+
+DistTmp: -0.397873
+
+DistTmp: -0.414451
+
+DistTmp: -0.414451
+Gedreht: -90 Grad, mit Distanz:-0.4084 Meter
+Distanz gefahren: -0.414451
+
+Driving 1 meters
+
+-1,1; -1,-1
+-180; -90; 2
+new Dist.: 0 Meter
+new Time: 4.032 Sek
+
+DistTmp: -0.016578
+
+DistTmp: -0.0331561
+
+DistTmp: -0.0497341
+
+DistTmp: -0.0663122
+
+DistTmp: -0.0828902
+
+DistTmp: -0.0994683
+
+DistTmp: -0.116046
+
+DistTmp: -0.132624
+
+DistTmp: -0.149202
+
+DistTmp: -0.16578
+
+DistTmp: -0.182358
+
+DistTmp: -0.198937
+
+DistTmp: -0.215515
+
+DistTmp: -0.232093
+
+DistTmp: -0.248671
+
+DistTmp: -0.265249
+
+DistTmp: -0.281827
+
+DistTmp: -0.298405
+
+DistTmp: -0.314983
+
+DistTmp: -0.331561
+
+DistTmp: -0.348139
+
+DistTmp: -0.364717
+
+DistTmp: -0.381295
+
+DistTmp: -0.397873
+
+DistTmp: -0.414451
+
+DistTmp: -0.414451
+Gedreht: -90 Grad, mit Distanz:-0.4084 Meter
+Distanz gefahren: -0.414451
+
+Driving 2 meters
+
+-1,-1; 1,-1
+90; -90; 2
+new Dist.: 0 Meter
+new Time: 8 Sek
+
+DistTmp: -0.016578
+
+DistTmp: -0.0331561
+
+DistTmp: -0.0497341
+
+DistTmp: -0.0663122
+
+DistTmp: -0.0828902
+
+DistTmp: -0.0994683
+
+DistTmp: -0.116046
+
+DistTmp: -0.132624
+
+DistTmp: -0.149202
+
+DistTmp: -0.16578
+
+DistTmp: -0.182358
+
+DistTmp: -0.198937
+
+DistTmp: -0.215515
+
+DistTmp: -0.232093
+
+DistTmp: -0.248671
+
+DistTmp: -0.265249
+
+DistTmp: -0.281827
+
+DistTmp: -0.298405
+
+DistTmp: -0.314983
+
+DistTmp: -0.331561
+
+DistTmp: -0.348139
+
+DistTmp: -0.364717
+
+DistTmp: -0.381295
+
+DistTmp: -0.397873
+
+DistTmp: -0.414451
+
+DistTmp: -0.414451
+Gedreht: -90 Grad, mit Distanz:-0.4084 Meter
+Distanz gefahren: -0.414451
+
+Driving 2 meters
+
+1,-1; 1,1
+0; -90; 2
+new Dist.: 0 Meter
+new Time: 11.968 Sek
+
+DistTmp: -0.016578
+
+DistTmp: -0.0331561
+
+DistTmp: -0.0497341
+
+DistTmp: -0.0663122
+
+DistTmp: -0.0828902
+
+DistTmp: -0.0994683
+
+DistTmp: -0.116046
+
+DistTmp: -0.132624
+
+DistTmp: -0.149202
+
+DistTmp: -0.16578
+
+DistTmp: -0.182358
+
+DistTmp: -0.198937
+
+DistTmp: -0.215515
+
+DistTmp: -0.232093
+
+DistTmp: -0.248671
+
+DistTmp: -0.265249
+
+DistTmp: -0.281827
+
+DistTmp: -0.298405
+
+DistTmp: -0.314983
+
+DistTmp: -0.331561
+
+DistTmp: -0.348139
+
+DistTmp: -0.364717
+
+DistTmp: -0.381295
+
+DistTmp: -0.397873
+
+DistTmp: -0.414451
+
+DistTmp: -0.414451
+Gedreht: -90 Grad, mit Distanz:-0.4084 Meter
+Distanz gefahren: -0.414451
+
+Driving 2 meters
+
+1,1; 0,0
+-135; -135; 1.41421
+new Dist.: 0 Meter
+new Time: 15.936 Sek
+
+DistTmp: -0.016578
+
+DistTmp: -0.0331561
+
+DistTmp: -0.0497341
+
+DistTmp: -0.0663122
+
+DistTmp: -0.0828902
+
+DistTmp: -0.0994683
+
+DistTmp: -0.116046
+
+DistTmp: -0.132624
+
+DistTmp: -0.149202
+
+DistTmp: -0.16578
+
+DistTmp: -0.182358
+
+DistTmp: -0.198937
+
+DistTmp: -0.215515
+
+DistTmp: -0.232093
+
+DistTmp: -0.248671
+
+DistTmp: -0.265249
+
+DistTmp: -0.281827
+
+DistTmp: -0.298405
+
+DistTmp: -0.314983
+
+DistTmp: -0.331561
+
+DistTmp: -0.348139
+
+DistTmp: -0.364717
+
+DistTmp: -0.381295
+
+DistTmp: -0.397873
+
+DistTmp: -0.414451
+
+DistTmp: -0.431029
+
+DistTmp: -0.447607
+
+DistTmp: -0.464185
+
+DistTmp: -0.480763
+
+DistTmp: -0.497341
+
+DistTmp: -0.513919
+
+DistTmp: -0.530497
+
+DistTmp: -0.547075
+
+DistTmp: -0.563654
+
+DistTmp: -0.580232
+
+DistTmp: -0.59681
+
+DistTmp: -0.613388
+
+DistTmp: -0.613388
+Gedreht: -135 Grad, mit Distanz:-0.6126 Meter
+Distanz gefahren: -0.613388
+
+Driving 1.41421 meters
+
+0,0; -10,20
+-26.5651; 108.435; 22.3607
+new Dist.: 0 Meter
+new Time: 19.36 Sek
+
+DistTmp: 0.016578
+
+DistTmp: 0.0331561
+
+DistTmp: 0.0497341
+
+DistTmp: 0.0663122
+
+DistTmp: 0.0828902
+
+DistTmp: 0.0994683
+
+DistTmp: 0.116046
+
+DistTmp: 0.132624
+
+DistTmp: 0.149202
+
+DistTmp: 0.16578
+
+DistTmp: 0.182358
+
+DistTmp: 0.198937
+
+DistTmp: 0.215515
+
+DistTmp: 0.232093
+
+DistTmp: 0.248671
+
+DistTmp: 0.265249
+
+DistTmp: 0.281827
+
+DistTmp: 0.298405
+
+DistTmp: 0.314983
+
+DistTmp: 0.331561
+
+DistTmp: 0.348139
+
+DistTmp: 0.364717
+
+DistTmp: 0.381295
+
+DistTmp: 0.397873
+
+DistTmp: 0.414451
+
+DistTmp: 0.431029
+
+DistTmp: 0.447607
+
+DistTmp: 0.464185
+
+DistTmp: 0.480763
+
+DistTmp: 0.497341
+
+DistTmp: 0.497341
+Gedreht: 108.435 Grad, mit Distanz:0.492054 Meter
+Distanz gefahren: 0.497341
+
+Driving 22.3607 meters
+

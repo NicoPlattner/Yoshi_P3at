@@ -1,0 +1,4 @@
+#VRML_OBJ R2019a utf8
+Yoshi {
+  controller "Main_Controller"
+}

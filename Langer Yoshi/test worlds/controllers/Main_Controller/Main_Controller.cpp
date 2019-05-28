@@ -24,6 +24,7 @@ int main(int argc, char **argv)
 	
 
 	//Add coordinates to the roadmap that should be driven to 
+	rc->addCoord(-10, 20);
 	rc->addCoord(0, 0);
 	rc->addCoord(1, 1);
 	rc->addCoord(1, -1);

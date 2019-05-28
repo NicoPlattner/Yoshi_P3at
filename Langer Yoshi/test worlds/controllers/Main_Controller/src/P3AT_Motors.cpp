@@ -123,5 +123,5 @@ double P3AT_Motors::RpsToMps(double rps, double radius) {
 }
 
 double P3AT_Motors::degreeToDistance(double rotationDegree) {
-	return (rotationDegree / 360) * this->UMFANG_WENDEKREIS;
+	return (rotationDegree / 360.0) * this->UMFANG_WENDEKREIS;
 }

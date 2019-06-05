@@ -108,6 +108,17 @@ bool P3AT_Motors::isDone(bool isTurning, double distance, double degree) {
 	return false;
 }
 
+double P3AT_Motors::getDonePercentage(bool isTurning, double distance, double degree) {
+	double doneDist;
+	if (isTurning) {
+		doneDist = abs(degreeToDistance(degree));
+	}
+	else {
+		doneDist = abs(distance);
+	}
+	return doneDist / abs(this->_distanceDriven);
+}
+
 void P3AT_Motors::stop(void) {
 	this->setAllWheelsSpeed(0);
 }

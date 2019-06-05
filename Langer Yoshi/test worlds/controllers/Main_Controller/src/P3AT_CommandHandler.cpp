@@ -64,6 +64,10 @@ void P3AT_CommandHandler::mcDone(double rotation) {
 	navigationStrategist->mcDone(rotation);
 }
 
+void P3AT_CommandHandler::mcDone(double rotation, double percentDone) {
+	navigationStrategist->mcDone(rotation, percentDone);
+}
+
 void P3AT_CommandHandler::addNavigationStrategist(Abstract_NavigationStrategist *ns){
 	navigationStrategist = ns;
 }

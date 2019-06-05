@@ -12,6 +12,7 @@ public:
 	void stop(void);
 	WayPoint getIntermediatePos();
 	void mcDone(double rotation);
+	void mcDone(double rotation, double percentDone);
 	void addNavigationStrategist(Abstract_NavigationStrategist *ns);
 protected:
 	Command createCommand(double rotation, double distance);	//adds the calculated rotation and distance to a new command and returns it

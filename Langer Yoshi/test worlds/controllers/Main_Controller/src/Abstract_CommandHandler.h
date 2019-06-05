@@ -17,7 +17,8 @@ public:
 	virtual void commandMotor(double currentRotation, WayPoint position, WayPoint destination) = 0;	//creates a command for the motor controller
 	virtual void stop(void) = 0;				//calls stop() in motor controller
 	virtual WayPoint getIntermediatePos() = 0;	//get new current position during execution of command
-	virtual void mcDone(double rotation) = 0;		//calls mcDone() in navigation strategist
+	virtual void mcDone(double rotation) = 0;		//calls mcDone(rotation) in navigation strategist
+	virtual void mcDone(double rotation, double percentDone) = 0;	//calls mcDone(rotation, percentDone) in navigation strategist
 	virtual void addNavigationStrategist(Abstract_NavigationStrategist *ns) = 0;	//adds pointer to NS to CH in constructor of NS
 protected:
 	Abstract_MotorController *motorController;

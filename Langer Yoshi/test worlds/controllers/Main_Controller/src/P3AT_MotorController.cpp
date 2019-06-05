@@ -55,6 +55,7 @@ void P3AT_MotorController::stop() {
 
 
 WayPoint P3AT_MotorController::getIntermediate() {
+
 	//TODO
 	WayPoint c;
 
@@ -75,14 +76,14 @@ void P3AT_MotorController::drive(double metres) {
 	this->Motors->drive(metres);
 }
 
-double P3AT_MotorController::calculateDistance() {
-	//TODO
-	return 0;
+double P3AT_MotorController::calcDistance() {
+	return Motors->getDonePercentage(_isTurning, currentCommand.distance, currentCommand.rotation);
 }
 
 void P3AT_MotorController::check() {
 	if (_isStopped) {
-		//TODO: implement call of local strategy in navigation strategist
+		reportStop();
+		_isStopped = false;
 	}
 	else if (currentCommand.isObsolete == true) {
 		Log::writeLog("isObsolete");
@@ -103,6 +104,11 @@ void P3AT_MotorController::check() {
 
 void P3AT_MotorController::fetchNextCommand() {
 	commandHandler->mcDone(currentCommand.rotation);
+}
+
+void P3AT_MotorController::reportStop() {
+	double percentDone = calcDistance();
+	commandHandler->mcDone(currentCommand.rotation, percentDone);
 }
 
 void P3AT_MotorController::addCommandHandler(Abstract_CommandHandler *ch) {

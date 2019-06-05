@@ -31,7 +31,7 @@ void P3AT_NavigationStrategist::mcDone(double rotation) {
 	causeMotion();
 }
 
-void P3AT_NavigationStrategist::mcDone(double rotation, WayPoint intermediate) {
+void P3AT_NavigationStrategist::mcDone(double rotation, double percentDone) {
 	//TODO
 }
 

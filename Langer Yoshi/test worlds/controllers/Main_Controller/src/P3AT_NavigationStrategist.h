@@ -8,7 +8,7 @@ class P3AT_NavigationStrategist : public Abstract_NavigationStrategist {	//see A
 public:
 	P3AT_NavigationStrategist(Abstract_RoadmapController *rc, Abstract_CommandHandler *ch);
 	void mcDone(double rotation); 
-	void mcDone(double rotation, WayPoint intermediate); 
+	void mcDone(double rotation, double percentDone);
 	void causeMotion(); 	
 	void stopMotors();
 	void updateWorldmap(double *sensorData);

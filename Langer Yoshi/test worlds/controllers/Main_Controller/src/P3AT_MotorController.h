@@ -16,8 +16,9 @@ public:
 private:
 	void rotate(double degrees);	//calls rotate in Motors
 	void drive(double metres);		//calls drive in Motors
-	double calculateDistance();		//TODO ???
+	double calcDistance();			//calls getDonePercentage in Motors
 	void fetchNextCommand();		//requests new command from CH
+	void reportStop();				//does the same as fetchNextCommand(), but forwards donePercentage and causes NS to use circumnavigation strategy
 
 	Command currentCommand;
 	Abstract_CommandHandler *commandHandler;

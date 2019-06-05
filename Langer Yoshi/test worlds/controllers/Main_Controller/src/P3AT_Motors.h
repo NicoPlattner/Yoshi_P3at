@@ -9,6 +9,7 @@ public:
 	void drive(double distance);
 	void stop(void);
 	bool isDone(bool isTurning, double distance, double degree);
+	double getDonePercentage(bool isTurning, double distance, double degree);
 
 private:
 	void setLeftWheelsSpeed(double speed);

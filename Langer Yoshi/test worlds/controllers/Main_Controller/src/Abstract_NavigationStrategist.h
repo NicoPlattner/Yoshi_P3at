@@ -19,7 +19,7 @@ class Abstract_NavigationStrategist {  //NS
 public:
 	Abstract_NavigationStrategist(Abstract_RoadmapController *rc, Abstract_CommandHandler *ch) {};
 	virtual void mcDone(double rotation) = 0; //called when motor controller is done with last command; updates position from roadmap; calls causeMotion again
-	virtual void mcDone(double rotation, WayPoint intermediate) = 0; //called if last command was interruted; updates position with "intermediate"
+	virtual void mcDone(double rotation, double percentDone) = 0; //called if last command was interruted; updates position with "percentDone"
 	virtual void causeMotion() = 0; //gets next destination from roadmap and calls commandMotor in CH
 	virtual void stopMotors() = 0;	//stops movement, if sensors indicate an obstacle ahead
 	virtual void updateWorldmap(double *sensorData) = 0;	//forwards data from SC to WC
